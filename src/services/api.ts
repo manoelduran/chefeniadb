@@ -1,12 +1,11 @@
 import axios from 'axios';
 
 export const api = axios.create({
-    baseURL: "http://192.168.15.10:3333",
+    baseURL: "http://192.168.15.7:3333",
 })
 
 export const getMvps = async () => {
         const response = await api.get("/mvps");
-        console.log("responseGETMVPS", response.data)
     return response;
 };
 
