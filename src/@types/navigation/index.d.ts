@@ -1,5 +1,5 @@
 export type RoomNavigationProps = {
-    room: Room;
+    room: string;
 };
 export type MvpNavigationProps = {
     mvp: Mvp;

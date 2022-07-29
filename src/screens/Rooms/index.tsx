@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { HStack, useTheme, VStack, IconButton, Heading, ScrollView } from 'native-base';
 import { SignOut } from 'phosphor-react-native';
 import RoomCard from '../../components/RoomCard';
@@ -8,9 +8,19 @@ import { useNavigation } from '@react-navigation/native';
 const Rooms = () => {
   const { colors } = useTheme();
   const navigation = useNavigation();
+  const [specifcMvp, setSpecifcMvp] = useState();
+  const [room, setRoom] = useState<'room_1' | 'room_2' | 'room_3' | 'room_4' | ''>('');
+  const selectedRoom = useCallback((room: 'room_1' | 'room_2' | 'room_3' | 'room_4' | '') => {
+    if (room !== '') {
+      setRoom(room);
+      navigation.navigate('room', {
+        room
+      })
+    }
+  }, [room])
   const goBack = () => {
     navigation.goBack();
-  } ;
+  };
   return (
     <VStack flex={1} pb={6} bg="black">
       <HStack
@@ -30,10 +40,10 @@ const Rooms = () => {
         />
       </HStack>
       <ScrollView >
-        <RoomCard title='Sala 1' onPress={() => console.log("ALOHA 1")} />
-        <RoomCard title='Sala 2' onPress={() => console.log("ALOHA 2")} />
-        <RoomCard title='Sala 3' onPress={() => console.log("ALOHA 3")} />
-        <RoomCard title='Sala 4' onPress={() => console.log("ALOHA 4")} />
+        <RoomCard title='Sala 1' onPress={() => selectedRoom('room_1')} />
+        <RoomCard title='Sala 2' onPress={() => selectedRoom('room_2')} />
+        <RoomCard title='Sala 3' onPress={() => selectedRoom('room_3')} />
+        <RoomCard title='Sala 4' onPress={() => selectedRoom('room_4')} />
       </ScrollView>
     </VStack>
   );

@@ -1,8 +1,9 @@
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { FlatList, VStack, Text, Heading, HStack, IconButton, useTheme, ChevronLeftIcon, Box, View, Icon } from 'native-base';
 import { CaretLeft, MagnifyingGlass, SignOut } from 'phosphor-react-native';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { RoomNavigationProps } from '../../@types/navigation';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Loading from '../../components/Loading';
@@ -14,6 +15,9 @@ import ApplicationState from '../../store/types/ApplicationState';
 
 const Room: React.FC = () => {
     const dispatch = useDispatch();
+    const route = useRoute();
+    const { room } = route.params as RoomNavigationProps;
+    console.log('room', room);
     const navigation = useNavigation();
     const { colors } = useTheme();
     const [search, setSearch] = useState('');
@@ -48,7 +52,7 @@ const Room: React.FC = () => {
                     Mvps da sala 1
                 </Heading>
             </HStack>
-            <VStack  h="310px" px={4}  >
+            <VStack h="310px" mb={6} px={4}  >
                 <Input
                     placeholder="Pesquise seu mvp"
                     mt={4}
@@ -76,7 +80,7 @@ const Room: React.FC = () => {
                     <Text color="danger.500">Erro ao carregar a lista de Mvps, dê um reload em sua aplicação</Text>
                 }
             </VStack>
-            <VStack w="full" mt="20px"   px={4} justifyContent="center" alignItems="center" bg="transparent">
+            <VStack w="full" mt="10px" px={4} justifyContent="center" alignItems="center" bg="transparent">
                 <Heading
                     color="success.500"
                     fontSize="xl"
@@ -84,7 +88,7 @@ const Room: React.FC = () => {
                     Mvps específicos
                 </Heading>
             </VStack>
-            <VStack flex={1} mt="20px"   px={4}>
+            <VStack flex={1} mt="15px" px={4}>
 
                 <Input
                     placeholder="Pesquise seu mvp"
