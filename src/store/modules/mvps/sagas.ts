@@ -27,15 +27,7 @@ function* onLoadMvpsStartAsync() {
         yield put(loadMvpsError(error.response.data));
     }
 };
-
-function* onLoadMvps() {
-    yield takeLatest(types.LOAD_MVPS_START, onLoadMvpsStartAsync);
-};
-
-const mvpSagas = [
-    fork(onLoadMvps),
-];
-
-export default function* rootSaga() {
-    yield all([...mvpSagas]);
-};
+export default all([takeLatest(types.LOAD_MVPS_START, onLoadMvpsStartAsync)]);
+// export default function* rootSaga() {
+//     yield all([...mvpSagas]);
+// };

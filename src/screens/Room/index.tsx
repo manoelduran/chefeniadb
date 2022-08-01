@@ -1,5 +1,5 @@
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { FlatList, VStack, Text, Heading, HStack, IconButton, useTheme, ChevronLeftIcon, Box, View, Icon } from 'native-base';
+import { FlatList, VStack, Text, Heading, HStack, IconButton, useTheme, ChevronLeftIcon, Box, View, Icon, ScrollView } from 'native-base';
 import { CaretLeft, MagnifyingGlass, SignOut } from 'phosphor-react-native';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,6 +11,8 @@ import MvpCard from '../../components/MvpCard';
 
 import { loadMvpsStart } from '../../store/modules/mvps/actions';
 import { MvpsState } from '../../store/modules/mvps/types';
+import { loadSpecificMvpsStart } from '../../store/modules/specificMvps/actions';
+import { SpecificMvpsState } from '../../store/modules/specificMvps/types';
 import ApplicationState from '../../store/types/ApplicationState';
 
 const Room: React.FC = () => {
@@ -26,9 +28,16 @@ const Room: React.FC = () => {
     };
 
     const { mvps, isLoading, error } = useSelector<ApplicationState, MvpsState>(applicationState => applicationState.mvps);
+    const { specificMvps } = useSelector<ApplicationState, SpecificMvpsState>(applicationState => applicationState.specificMvps);
     useEffect(() => {
         dispatch(loadMvpsStart(mvps))
     }, []);
+    useEffect(() => {
+        console.log('specificMvps', specificMvps)
+        console.log('roomPage', room)
+        dispatch(loadSpecificMvpsStart(room, specificMvps))
+    }, [room])
+
     if (isLoading) {
         return (
             <Loading />
@@ -65,7 +74,7 @@ const Room: React.FC = () => {
                     onChangeText={setSearch}
                     InputLeftElement={<Icon as={<MagnifyingGlass color={colors.success[500]} />} ml={4} />}
                 />
-                {mvps ?
+                {mvps &&
                     <FlatList
                         style={{ flex: 1 }}
                         data={mvps}
@@ -76,8 +85,6 @@ const Room: React.FC = () => {
                             <MvpCard key={index} mvp={item} onPress={() => { }} />
                         )}
                     />
-                    :
-                    <Text color="danger.500">Erro ao carregar a lista de Mvps, dê um reload em sua aplicação</Text>
                 }
             </VStack>
             <VStack w="full" mt="10px" px={4} justifyContent="center" alignItems="center" bg="transparent">
@@ -103,10 +110,10 @@ const Room: React.FC = () => {
                     InputLeftElement={<Icon as={<MagnifyingGlass color={colors.success[500]} />} ml={4} />}
                 />
 
-                {mvps ?
+                {specificMvps &&
                     <FlatList
                         style={{ flex: 1 }}
-                        data={mvps}
+                        data={specificMvps}
                         keyExtractor={(item) => item.name}
                         contentContainerStyle={{ paddingBottom: 100 }}
                         showsVerticalScrollIndicator={false}
@@ -114,8 +121,6 @@ const Room: React.FC = () => {
                             <MvpCard key={index} mvp={item} onPress={() => { }} />
                         )}
                     />
-                    :
-                    <Text color="danger.500">Erro ao carregar a lista de Mvps, dê um reload em sua aplicação</Text>
                 }
             </VStack>
         </VStack>
