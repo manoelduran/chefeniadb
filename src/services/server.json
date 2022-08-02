@@ -2682,5 +2682,247 @@
                 }
             ]
         }
+    ],
+    "room_2": [
+        {
+            "name": "Menestrel Alphoccio",
+            "quantity": 7,
+            "image": "data:image/png;base64,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",
+            "property": "Vento 4",
+            "breed": "Humanoide",
+            "level": 160,
+            "weakness": [
+                {
+                    "neutral": 100
+                },
+                {
+                    "water": 60
+                },
+                {
+                    "earth": 200
+                },
+                {
+                    "fire": 100
+                },
+                {
+                    "wind": -50
+                },
+                {
+                    "poison": 75
+                },
+                {
+                    "holy": 75
+                },
+                {
+                    "dark": 75
+                },
+                {
+                    "ghost": 25
+                },
+                {
+                    "undead": 25
+                }
+            ]
+        },
+        {
+            "name": "Algoz Eremes",
+            "quantity": 1,
+            "image": "data:image/png;base64,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",
+            "property": "Veneno 4",
+            "breed": "Humanoide",
+            "level": 160,
+            "weakness": [
+                {
+                    "neutral": 100
+                },
+                {
+                    "water": 75
+                },
+                {
+                    "earth": 75
+                },
+                {
+                    "fire": 75
+                },
+                {
+                    "wind": 75
+                },
+                {
+                    "poison": 0
+                },
+                {
+                    "holy": 125
+                },
+                {
+                    "dark": -25
+                },
+                {
+                    "ghost": 25
+                },
+                {
+                    "undead": -25
+                }
+            ]
+        },
+        {
+            "name": "Sumo Sacerdotisa Margaretha",
+            "quantity": 1,
+            "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAABlCAYAAADd5LqmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAArvSURBVHhe1Zrdb1VZGYf5KyR6YebGjJlAIoELuICYCkFwUmkMROiQDg1Yk2kbnWYiNkJnAtOk1NFK4qkRpg3DzUwyH0ZNFPTOxBtv97W3Xvg3EN3P6np23rO7zzn7tJx6fJNf9l6f7/O+e621Tzcc6mcvXrzoROXq8bP/lJZvd0FH5S7jY4BrvUB71Y+FAc61H+DYwmPC9QMc2wD+r+GxQQGMNTwWA2gCbaq7OXmzg5Zm3kmyPHXsYhL3uevorS28wO/Nr+6SAVg2qDx09NYrAEywjeVfd0nYqNjOk8hTjNZ6wZvtCKXq4E391n/6oMhTjdbq8IALsb3+tEvWN8Hb/vnWHwp0IEuoF/z21p92VAtAGYii7vmnf0nglJknT3kwVmVR8CbVAkj3uR54ZEDXz00fXABdWReqn3IQloW3/sCyH9cuIG2CqPrnPs+f/aMLnvYDCaDKegapgzWpqY/LhjquJCW7GJ1FeO6FSnWACei11K62WJ/HM1evd8lLMSbnaMNpDIKsbW9+vBs4l4Wvgq33KSX8yAIQXnDekjhO8BliF1h5zxiuVcChT2o7KHicoAjuvVC0V+XyKmBXW6kIz1UfIwmA81jHCJA6vHWUfTpr37+9A53bq6eS+wB+IPAIAFUF1AAOEOAoBsg9fQ1AUSf8SALAMVAGkhyXm5U6we0juPAnDh+uss5RaQKQY0YOj6pHX4ILhi58+bXOO+dnOpvzG5Uo246A9S3LWOGZf6TwLhuyZCAAzZ5IzpPq8IyxjX70vzd/t9hY2ajgma9s3z98nKA+ESBxk+EYGCC5ll3SMtleflKJYKi3H8CP1h+nX5a94LnvZ419eg22DifCc0UAANkLnjL1ER5g4LkyB1fmbwOODQWvCa1TTw8A5+e+qAAjPKKedjcv4+I8XAf5jvbS4Kljabx7dalYvbFS/Hxls1hd/uWOKP9gtfAJ0C/Cx/nagMvX2LdnQzacccq4cYGYOTtdTB+bKBYnrhZ3J99KsASQVN4TwOr0cvHDM5eK179+ZOeI3QO8bD379W0sDWerCyvF1dOTxU8uLxSddx8Xa3c3ixvn5hLYjeMXqyAU5bmJNwqg3fDA8wSE5+TJLhptILjWr9OloxPFwtStYub4d4v5CzeK9bn7Ffz2ZtEhgOnjkwVBoDe+cbaYPjlZLN1cT+DTpy4VD5ZW02/5CD/oS0IrcK2p8+ypic6NM1MJfGNysYNmJ2eLu7dWikvHLiZ4MqoAVhNHzneunrlcPFr/TQp46sjZ4jtfOZqOSuAJLLvZZbK0hsfqnVevz3WuHb1YrJwuH32GX3ztQocnQf3lk5dTAGt3fldJ8HNHvp2CJsjZb11Jc1x55WQSAbSBz8V2FgeQdeCBxbGibub1xUpf+9KR6h4o4OrjuH+4eLuz9cGTztOlB8X7b/44PYHsapftCT6a8I/vfFBJcLNMhoGPmY/wm9fvdx4v/TZdDeTZZ88LAqA9u2q0fcH7iHGCLLO2+RoguBLeLAMqPIEL/+ePPktLaKTwWB1+e+tfSc+f/bt4uPa3lHmuaeOW4p6+LA8DEJQAPl7/VQE8TwZlN6OxOjxLRnhggRdc2XfzZ79IIhADYK0DTZk+2c1oDIc6xpkBfPLR3wuWCG/JmHlOGtrtqwwCCc+eym5GYxEe8YcHMLfnlov18qdAPNeBQfZhXByrCIQAWFbZzWgMZ5ztQgCGY67AP9r4NAVAtoGyT4SvB0Gb99nNLtv3UYlDTosIj2PgXTouHzJunwgvJKKMaEPZTaPtGx6H9TParAH7/I//TPBmXVj7OIb7qDx9X9t31sn4IHjEfTxBkOOjHJtdjM5w1AseAczpwpqvw9uX8YxFZp2nlF2MxjzqBEACuWE53+mzOXcnveYRbVzr4NzTlzGI+VV2+XKMk4MjDAgcRnABAYi/dVAEj/Dba79PZcf5PmCTjwSeyQnAIAwEvfXNyQRhvQKuCdyso/RSy/OjYeBbbeA0OX9Y5OwQgNlFwgPJxySgqQdOcBT3Cn1oJ0jmR8NmvdXRWcGXv1+ArwunwnOlzicU4V3vwvuE9gqPDYRnUuF1pIQ/8cqpdE2PP/88bgqgDk6Zq/Nkl61tYPaZFFDAmuDJNvDcR3iCZQMLKajw1lmf3Q1lreCnXj1RLYkITxv1XJvgqXOju0di5n0aKLsbygbCYzhMX7nKILhHQCMgTh3eCW4HfuePE+HrwfIXlps1LqdhAxB8IDzQwBsAn+yQWaQOdT2BhmUG+I/OT3XBs4kNILtrZQPhbTDz1XfGHAD13PNRlXIMIGbdMv2b4D2FktMW1hocw5nABgBIhDco5X5Q9OU9ADxrH3iAhR8m+33BsTo8ExuA8HHJIOrrol8sE0B8iQnfNvsDwbHYgUk9KRTgiHvBfTIGyPd46yM8Y5ivDt8m+63hEb8SIzzArF/hgalDUwe47YgNnPrmtS98XPeD4FuBa8LzNQtnZLgOz72AQBkgGzVlvWz39OHe/v6lBXAUdYzPCF3WGlwT/ovND9MXMcFUPBINyD5mmiB4eRmk8PSrwyPqs/suGxqeTCDg+bwBjNlBZtTs1jOcwJefpBNJRfhe2c/uu2zP8LzigecPbB3gHEiORTItNCIIwIFN/6C2/tekGIBfzprge2V/KBOcH18RXieAcq1L+ASdfpWWaoAHMoKrfcMLIjxrHvjPVzar7Asfj7x+8C4h2oSn/0uHNysRnq8DbGAd9IPnRUSG07IJ8kjtB09dxtibDQNPOcKzB4Dn6ATW5YLi+8B1Xw+AMvNnlGQDNywdVB0eEOGdHMjoHHiuER5QFV9mjG8LPxQ4MsPpBXXqSgWvMwDr8Mp6AojwBiB8PDLjHNy3ho/QlJ2QrAOOAGkDz73LiTH1H217ge9rERxrgudfMSLsfuBRP3jnyTj9rR886114oGzbLzz3TfDuG8oZp7/tB96y8Do2sH6bFuGDfs4R4VFG6m3CG8AgeNQLPh6XXHvBI45LfMQ5GG8A1CfAQdYEz0kjPEtg1PBoT/CYATiZ8KgJnh9lvRy77oGP674tPKI+o7Uz4FkiTFSHB8SMAye8GVfDwNc3bZyHcsYazoTnewvl6Vd3/gEBGAQccukYBGKs8GnZDYCnn4qJoDx09jFAhUdACEBbVHwaMSiC3A882hM8Jhw/yiK8SkGVf2wjn0iU45rgP1n9sLh3a6Hg/x+MBB7niNMmAijA7KN8SlwNgnvaIjwSnt9R/uBDgnPP+IzT3nCWoIOAiorQSEj6cs88wlNnvzgH8P6hH+HdP3uCx9nM+Ztd8HVFGAANiDbhsVhfH8e+Et4AXDp7WjI6qsPPf2+pUoQw48AwBlHO06UvzbQp+ivggRSePzP7gceXaaNNfvV0cm4AKIJHeAAAYhzlKOpoAz6udcQ4loTwZF/1WioDwTHgmwJQ1MUsNsGniUqjL/Dxz8AIz5djM39nei4pD91lreAxAzAIhVMlfB6yyxJ4KU6Z+t+xjAVeLVy7lsD7wQ0Fb3Z7qR847T4hjsQm+JiU2atzBeoH2BoeE7IuM5+7NRr92BtcgXe5CO5TqcMztjXgKAw4gJZn3ut07j8q7r39fuFTiODCA73w5tvFoIQciAkoPIonFfXxxAJ8rOCBElx4oNcWHyYJDzD989D/vbknWC5b60+ThFYEJ/hYwrOW+boMPFlHZBvYCD528G5CJaSBRfg8bHwMuAiPWCooBpK7j5+ZXeHN+FhDH5wdOvRftgmW7VYT/7UAAAAASUVORK5CYII=",
+            "property": "Sagrado 4",
+            "breed": "Humanoide",
+            "level": 160,
+            "weakness": [
+                {
+                    "neutral": 100
+                },
+                {
+                    "water": 0
+                },
+                {
+                    "earth": 0
+                },
+                {
+                    "fire": 0
+                },
+                {
+                    "wind": 0
+                },
+                {
+                    "poison": 0
+                },
+                {
+                    "holy": -100
+                },
+                {
+                    "dark": 200
+                },
+                {
+                    "ghost": 0
+                },
+                {
+                    "undead": 175
+                }
+            ]
+        },
+        {
+            "name": "Musa Trentini",
+            "quantity": 1,
+            "image": "data:image/png;base64,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",
+            "property": "Vento 4",
+            "breed": "Humanoide",
+            "level": 186,
+            "weakness": [
+                {
+                    "neutral": 100
+                },
+                {
+                    "water": 60
+                },
+                {
+                    "earth": 200
+                },
+                {
+                    "fire": 100
+                },
+                {
+                    "wind": -50
+                },
+                {
+                    "poison": 75
+                },
+                {
+                    "holy": 75
+                },
+                {
+                    "dark": 75
+                },
+                {
+                    "ghost": 25
+                },
+                {
+                    "undead": 25
+                }
+            ]
+        },
+        {
+            "name": "Bioquímico Flamel",
+            "quantity": 1,
+            "image": "data:image/png;base64,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",
+            "property": "Fogo 4",
+            "breed": "Humanoide",
+            "level": 186,
+            "weakness": [
+                {
+                    "neutral": 100
+                },
+                {
+                    "water": 200
+                },
+                {
+                    "earth": 60
+                },
+                {
+                    "fire": -50
+                },
+                {
+                    "wind": 100
+                },
+                {
+                    "poison": 75
+                },
+                {
+                    "holy": 75
+                },
+                {
+                    "dark": 75
+                },
+                {
+                    "ghost": 25
+                },
+                {
+                    "undead": 25
+                }
+            ]
+        },
+        {
+            "name": "Arcebispa Margaretha",
+            "quantity": 1,
+            "image": "data:image/png;base64,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",
+            "property": "Sagrado 4",
+            "breed": "Humanoide",
+            "level": 187,
+            "weakness": [
+                {
+                    "neutral": 100
+                },
+                {
+                    "water": 0
+                },
+                {
+                    "earth": 0
+                },
+                {
+                    "fire": 0
+                },
+                {
+                    "wind": 0
+                },
+                {
+                    "poison": 0
+                },
+                {
+                    "holy": -100
+                },
+                {
+                    "dark": 200
+                },
+                {
+                    "ghost": 0
+                },
+                {
+                    "undead": 175
+                }
+            ]
+        }
     ]
 }
