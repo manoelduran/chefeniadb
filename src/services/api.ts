@@ -10,29 +10,32 @@ export const getMvps = async () => {
 };
 
 export const getSpecificMvps = async (room: string) => {
-    console.log('room', room)
     if (room === 'room_1') {
         const response = await api.get("/room_1");
-        console.log('response', response)
         return response;
     }
     if (room === 'room_2') {
         const response = await api.get("/room_2");
-        console.log('response', response)
         return response;
     }
     if (room === 'room_3') {
         const response = await api.get("/room_3");
-        console.log('response', response)
         return response;
     }
     if (room === 'room_4') {
         const response = await api.get("/room_4");
-        console.log('response', response)
         return response;
     }
     return null;
-}
+};
+
+export const getMvp = async (name: string) => {
+    console.log('name', name);
+    const response = await api.get(`/mvps/${name}`);
+    console.log('response', response)
+    return response;
+};
+
 // export const createUser = async (data: FormUser) => {
 //     const response = await api.post("/users", data);
 //     return response;

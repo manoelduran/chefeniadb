@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Mvp from '../screens/Mvp';
 import Room from '../screens/Room';
 import Rooms from '../screens/Rooms';
 
@@ -15,6 +16,10 @@ export function AppRoutes() {
             <Screen
                 name="room"
                 component={Room}
+            />
+            <Screen
+                name="mvp"
+                component={Mvp}
             />
         </Navigator>
     )

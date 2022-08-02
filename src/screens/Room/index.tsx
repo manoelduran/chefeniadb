@@ -1,7 +1,7 @@
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { FlatList, VStack, Text, Heading, HStack, IconButton, useTheme, ChevronLeftIcon, Box, View, Icon, ScrollView } from 'native-base';
 import { CaretLeft, MagnifyingGlass, SignOut } from 'phosphor-react-native';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RoomNavigationProps } from '../../@types/navigation';
 import Button from '../../components/Button';
@@ -19,10 +19,8 @@ const Room: React.FC = () => {
     const dispatch = useDispatch();
     const route = useRoute();
     const { room } = route.params as RoomNavigationProps;
-    console.log('room', room);
     const navigation = useNavigation();
     const { colors } = useTheme();
-    const [search, setSearch] = useState('');
     const goBack = () => {
         navigation.goBack();
     };
@@ -33,48 +31,62 @@ const Room: React.FC = () => {
         dispatch(loadMvpsStart(mvps))
     }, []);
     useEffect(() => {
-        console.log('specificMvps', specificMvps)
-        console.log('roomPage', room)
         dispatch(loadSpecificMvpsStart(room, specificMvps))
     }, [room])
-
+    const selectedMvp = useCallback((mvp: Mvp) => {
+        navigation.navigate('mvp', {
+            mvp
+        })
+    }, [])
     if (isLoading) {
         return (
             <Loading />
         );
     };
     return (
-        <VStack flex={1} justifyContent="center" alignItems="center" bg="black">
+        <VStack flex={1} h="full" w="full" justifyContent="center" alignItems="center" bg="black">
             <HStack
                 w="full"
                 justifyContent="space-between"
                 alignItems="center"
                 bg="gray.700"
-                pt={12}
-                pb={5}
-                px={6}
+                h="100px"
+                pt={3}
+                px={4}
             >
                 <IconButton onPress={goBack}
                     icon={<CaretLeft size={26} color={colors.gray[400]} />}
                 />
-                <Heading color="success.500" fontSize="2xl" >
+                {room === 'room_1' && <Heading color="success.500" fontSize="2xl" >
                     Mvps da sala 1
-                </Heading>
+                </Heading>}
+                {room === 'room_2' && <Heading color="success.500" fontSize="2xl" >
+                    Mvps da sala 2
+                </Heading>}
+                {room === 'room_3' && <Heading color="success.500" fontSize="2xl" >
+                    Mvps da sala 3
+                </Heading>}
+                {room === 'room_4' && <Heading color="success.500" fontSize="2xl" >
+                    Mvps da sala 4
+                </Heading>}
             </HStack>
-            <VStack h="310px" mb={6} px={4}  >
+            <Box w="full" pt={4} pb={2} px={4}  >
                 <Input
                     placeholder="Pesquise seu mvp"
-                    mt={4}
-                    mb={4}
+
+
                     _focus={{
                         borderWidth: 1,
                         borderColor: colors.success[500],
                         bg: colors.gray[600]
                     }}
-                    onChangeText={setSearch}
+                    onChangeText={() => { }}
                     InputLeftElement={<Icon as={<MagnifyingGlass color={colors.success[500]} />} ml={4} />}
                 />
-                {mvps &&
+            </Box>
+
+            {mvps &&
+                <Box flex={1} pt={4} pb={4} px={4} >
                     <FlatList
                         style={{ flex: 1 }}
                         data={mvps}
@@ -82,35 +94,21 @@ const Room: React.FC = () => {
                         showsVerticalScrollIndicator={false}
                         contentContainerStyle={{ paddingBottom: 100 }}
                         renderItem={({ item, index }) => (
-                            <MvpCard key={index} mvp={item} onPress={() => { }} />
+                            <MvpCard key={index} mvp={item} onPress={() => selectedMvp(item)} />
                         )}
                     />
-                }
-            </VStack>
-            <VStack w="full" mt="10px" px={4} justifyContent="center" alignItems="center" bg="transparent">
+                </Box>
+            }
+            <Box justifyContent="center" alignItems="center" >
                 <Heading
                     color="success.500"
                     fontSize="xl"
                 >
                     Mvps específicos
                 </Heading>
-            </VStack>
-            <VStack flex={1} mt="15px" px={4}>
-
-                <Input
-                    placeholder="Pesquise seu mvp"
-                    mt={4}
-                    mb={4}
-                    _focus={{
-                        borderWidth: 1,
-                        borderColor: colors.success[500],
-                        bg: colors.gray[600]
-                    }}
-                    onChangeText={setSearch}
-                    InputLeftElement={<Icon as={<MagnifyingGlass color={colors.success[500]} />} ml={4} />}
-                />
-
-                {specificMvps &&
+            </Box>
+            {specificMvps &&
+                <Box flex={1} pt={4} pb={4} px={4}>
                     <FlatList
                         style={{ flex: 1 }}
                         data={specificMvps}
@@ -118,11 +116,11 @@ const Room: React.FC = () => {
                         contentContainerStyle={{ paddingBottom: 100 }}
                         showsVerticalScrollIndicator={false}
                         renderItem={({ item, index }) => (
-                            <MvpCard key={index} mvp={item} onPress={() => { }} />
+                            <MvpCard key={index} mvp={item} onPress={() => selectedMvp(item)} />
                         )}
                     />
-                }
-            </VStack>
+                </Box>
+            }
         </VStack>
     );
 };

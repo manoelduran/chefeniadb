@@ -21,7 +21,6 @@ function* onLoadSpecificMvpsStartAsync({ payload }: onSendCallForSpecificMvpsSta
     const {room} = payload;
     try {
         const response: AxiosResponse<Mvp[]> = yield call(getSpecificMvps, room);
-        console.log('responseSaga', response)
         if (response) {
             yield delay(500); // setTimeOut
             yield put(loadSpecificMvpsSuccess(response.data));

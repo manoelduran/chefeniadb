@@ -10,7 +10,7 @@ interface MvpCardProps {
 const MvpCard: React.FC<MvpCardProps> = ({ mvp, onPress }) => {
     const { colors } = useTheme();
     return (
-        <VStack flex={1} bg="transparent" mb={10} >
+        <VStack  bg="transparent" mb={10} >
             <Pressable onPress={onPress}  >
                 {({
                     isPressed
@@ -27,7 +27,7 @@ const MvpCard: React.FC<MvpCardProps> = ({ mvp, onPress }) => {
                                     <Skull
                                         size={20} color={colors.success[500]}
                                     />
-                                    <Text fontSize="md" w="170px" color={isPressed ? "red.600" : "success.600"}>{mvp.name}</Text>
+                                    <Text fontSize="md" w="150px" color={isPressed ? "red.600" : "success.600"}>{mvp.name}</Text>
                                 </HStack>
                                 <HStack w="full" mt="10" alignItems="center" paddingLeft={5}>
                                     <Sword

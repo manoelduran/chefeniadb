@@ -1,7 +1,6 @@
 import * as types from './types';
 
 export const loadSpecificMvpsStart = (room: string, specificMvps: Mvp[]) => {
-    console.log('roomAction', room, specificMvps)
     return {
         type: types.LOAD_SPECIFIC_MVPS_START,
         payload: {
