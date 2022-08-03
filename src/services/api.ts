@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const api = axios.create({
-    baseURL: "http://192.168.15.13:3333",
+    baseURL: "http://192.168.15.6:3333",
 })
 
 export const getMvps = async () => {
@@ -10,7 +10,7 @@ export const getMvps = async () => {
 };
 
 export const getSpecificMvps = async (room: string) => {
-    console.log('room',room)
+    console.log('room', room)
     if (room === 'room_1') {
         const response = await api.get("/room_1");
         return response;

@@ -43,10 +43,10 @@ const Mvp = () => {
                     px={4}
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         Quantidade
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         {mvp.quantity}
                     </Heading>
                 </HStack>
@@ -54,10 +54,10 @@ const Mvp = () => {
                     px={4}
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         Level
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         {mvp.level}
                     </Heading>
                 </HStack>
@@ -65,10 +65,10 @@ const Mvp = () => {
                     px={4}
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         Raça
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         {mvp.breed}
                     </Heading>
                 </HStack>
@@ -76,123 +76,143 @@ const Mvp = () => {
                     px={4}
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         Propriedade
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         {mvp.property}
                     </Heading>
                 </HStack>
-                    <Center mt={4} mb={4}>
-                        <Heading color="success.500" fontSize="2xl">Fraquezas</Heading>
-                    </Center>
-                    <HStack w="full"
+                <Center mt={4} mb={4}>
+                    <Heading color="success.500" fontSize="2xl">Fraquezas</Heading>
+                </Center>
+                <HStack w="full"
                     px={4}
+                    py={4}
+                    bg="#e9ecef"
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="black" fontSize="2xl" >
                         Neutro
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="black" fontSize="2xl" >
                         {mvp.weakness[0].neutral}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
                     px={4}
+                    py={4}
+                    bg='#7ba7e1'
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         Água
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         {mvp.weakness[1].water}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
                     px={4}
+                    py={4}
+                    bg="#daaf85"
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="black" fontSize="2xl" >
                         Terra
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="black" fontSize="2xl" >
                         {mvp.weakness[2].earth}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
                     px={4}
+                    py={4}
+                    bg="#ff7575"
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         Fogo
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         {mvp.weakness[3].fire}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
                     px={4}
+                    py={4}
+                    bg="#cafeb8"
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="black" fontSize="2xl" >
                         Vento
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="black" fontSize="2xl" >
                         {mvp.weakness[4].wind}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
                     px={4}
+                    py={4}
+                    bg="#4bfe78"
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="black" fontSize="2xl" >
                         Veneno
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="black" fontSize="2xl" >
                         {mvp.weakness[5].poison}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
                     px={4}
+                    py={4}
+                    bg="#ffffaa"
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="black" fontSize="2xl" >
                         Sagrado
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="black" fontSize="2xl" >
                         {mvp.weakness[6].holy}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
                     px={4}
+                    py={4}
+                    bg="#a55feb"
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         Sombrio
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         {mvp.weakness[7].dark}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
                     px={4}
+                    py={4}
+                    bg="#aaaaaa"
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="black" fontSize="2xl" >
                         Fantasma
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="black" fontSize="2xl" >
                         {mvp.weakness[8].ghost}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
                     px={4}
+                    py={4}
+                    bg="black"
                     justifyContent="space-between"
                     alignItems="center">
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         Morto-Vivo
                     </Heading>
-                    <Heading color="success.500" fontSize="2xl" >
+                    <Heading color="white" fontSize="2xl" >
                         {mvp.weakness[9].undead}%
                     </Heading>
                 </HStack>
