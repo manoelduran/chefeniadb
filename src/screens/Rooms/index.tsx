@@ -8,7 +8,6 @@ import { useNavigation } from '@react-navigation/native';
 const Rooms = () => {
   const { colors } = useTheme();
   const navigation = useNavigation();
-  const [specifcMvp, setSpecifcMvp] = useState();
   const [room, setRoom] = useState<'room_1' | 'room_2' | 'room_3' | 'room_4' | ''>('');
   const selectedRoom = useCallback((room: 'room_1' | 'room_2' | 'room_3' | 'room_4' | '') => {
     if (room !== '') {

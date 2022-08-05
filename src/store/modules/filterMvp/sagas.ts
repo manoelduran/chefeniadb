@@ -19,7 +19,6 @@ import { onSendCallForFilterMvpStart } from './types';
 
 function* onLoadFilterMvpStartAsync({ payload }: onSendCallForFilterMvpStart) {
     const { name } = payload;
-    console.log('payload', payload);
     try {
         const response: AxiosResponse<Mvp> = yield call(getMvp, name);
         if (response) {

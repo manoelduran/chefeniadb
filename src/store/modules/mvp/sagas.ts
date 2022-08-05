@@ -19,7 +19,6 @@ import { onSendCallForMvpStart } from './types';
 
 function* onLoadMvpStartAsync({ payload }: onSendCallForMvpStart) {
     const { name } = payload;
-    console.log('payload', payload);
     try {
         const response: AxiosResponse<Mvp> = yield call(getMvp, name);
         if (response) {

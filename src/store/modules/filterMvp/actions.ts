@@ -1,7 +1,6 @@
 import * as types from './types';
 
 export const loadFilterMvpStart = (name: string, mvp: Mvp) => {
-    console.log('name', name, mvp)
     return {
         type: types.LOAD_FILTER_MVP_START,
         payload: {
