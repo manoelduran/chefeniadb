@@ -5,36 +5,14 @@ interface Mvp {
     property: string,
     breed: string,
     level: number,
-    weakness: [
-        {
-            neutral: number
-        },
-        {
-            water: number
-        },
-        {
-            earth: number
-        },
-        {
-            fire: number
-        },
-        {
-            wind: number
-        },
-        {
-            poison: number
-        },
-        {
-            holy: number
-        },
-        {
-            dark: number
-        },
-        {
-            ghost: number
-        },
-        {
-            undead: number
-        }
-    ]
+    neutral: number
+    water: number
+    earth: number
+    fire: number
+    wind: number
+    poison: number
+    holy: number
+    dark: number
+    ghost: number
+    undead: number
 }
