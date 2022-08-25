@@ -1017,38 +1017,16 @@
             "property": "Fantasma 3",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 0
-                },
-                {
-                    "water": 100
-                },
-                {
-                    "earth": 100
-                },
-                {
-                    "fire": 100
-                },
-                {
-                    "wind": 100
-                },
-                {
-                    "poison": 50
-                },
-                {
-                    "holy": 100
-                },
-                {
-                    "dark": 100
-                },
-                {
-                    "ghost": 175
-                },
-                {
-                    "undead": 100
-                }
-            ]
+            "neutral": 0,
+            "water": 100,
+            "earth": 100,
+            "fire": 100,
+            "wind": 100,
+            "poison": 50,
+            "holy": 100,
+            "dark": 100,
+            "ghost": 175,
+            "undead": 100
         },
         {
             "name": "Mestre-ferreiro Howard",
@@ -1057,38 +1035,16 @@
             "property": "Terra 4",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 100
-                },
-                {
-                    "earth": -50
-                },
-                {
-                    "fire": 200
-                },
-                {
-                    "wind": 60
-                },
-                {
-                    "poison": 75
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": 100,
+            "earth": -50,
+            "fire": 200,
+            "wind": 60,
+            "poison": 75,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Atiradora de Elite Cecil",
@@ -1097,38 +1053,16 @@
             "property": "Vento 4",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 60
-                },
-                {
-                    "earth": 200
-                },
-                {
-                    "fire": 100
-                },
-                {
-                    "wind": -50
-                },
-                {
-                    "poison": 75
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": 60,
+            "earth": 200,
+            "fire": 100,
+            "wind": -50,
+            "poison": 75,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Mestre Chen Liu",
@@ -1137,38 +1071,16 @@
             "property": "Água 3",
             "breed": "Demônio",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": -59
-                },
-                {
-                    "earth": 100
-                },
-                {
-                    "fire": 60
-                },
-                {
-                    "wind": 200
-                },
-                {
-                    "poison": 25
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": -59,
+            "earth": 100,
+            "fire": 60,
+            "wind": 200,
+            "poison": 25,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Paladino Randel Lawrence",
@@ -1177,38 +1089,16 @@
             "property": "Sagrado 4",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 0
-                },
-                {
-                    "earth": 0
-                },
-                {
-                    "fire": 0
-                },
-                {
-                    "wind": 0
-                },
-                {
-                    "poison": 0
-                },
-                {
-                    "holy": -100
-                },
-                {
-                    "dark": 200
-                },
-                {
-                    "ghost": 0
-                },
-                {
-                    "undead": 175
-                }
-            ]
+            "neutral": 100,
+            "water": 0,
+            "earth": 0,
+            "fire": 0,
+            "wind": 0,
+            "poison": 0,
+            "holy": -100,
+            "dark": 200,
+            "ghost": 0,
+            "undead": 175
         },
         {
             "name": "Professora Celia Alde",
@@ -1217,38 +1107,16 @@
             "property": "Fantasma 3",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 0
-                },
-                {
-                    "water": 100
-                },
-                {
-                    "earth": 100
-                },
-                {
-                    "fire": 100
-                },
-                {
-                    "wind": 100
-                },
-                {
-                    "poison": 50
-                },
-                {
-                    "holy": 100
-                },
-                {
-                    "dark": 100
-                },
-                {
-                    "ghost": 175
-                },
-                {
-                    "undead": 100
-                }
-            ]
+            "neutral": 0,
+            "water": 100,
+            "earth": 100,
+            "fire": 100,
+            "wind": 100,
+            "poison": 50,
+            "holy": 100,
+            "dark": 100,
+            "ghost": 175,
+            "undead": 100
         },
         {
             "name": "Arcana Kathryne",
@@ -1257,38 +1125,16 @@
             "property": "Fantasma 4",
             "breed": "Humanoide",
             "level": 187,
-            "weakness": [
-                {
-                    "neutral": 0
-                },
-                {
-                    "water": 100
-                },
-                {
-                    "earth": 100
-                },
-                {
-                    "fire": 100
-                },
-                {
-                    "wind": 100
-                },
-                {
-                    "poison": 25
-                },
-                {
-                    "holy": 100
-                },
-                {
-                    "dark": 100
-                },
-                {
-                    "ghost": 200
-                },
-                {
-                    "undead": 100
-                }
-            ]
+            "neutral": 0,
+            "water": 100,
+            "earth": 100,
+            "fire": 100,
+            "wind": 100,
+            "poison": 25,
+            "holy": 100,
+            "dark": 100,
+            "ghost": 200,
+            "undead": 100
         },
         {
             "name": "Mecânico Howard",
@@ -1297,38 +1143,16 @@
             "property": "Água 4",
             "breed": "Humanoide",
             "level": 187,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": -50
-                },
-                {
-                    "earth": 100
-                },
-                {
-                    "fire": 60
-                },
-                {
-                    "wind": 200
-                },
-                {
-                    "poison": 25
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": -50,
+            "earth": 100,
+            "fire": 60,
+            "wind": 200,
+            "poison": 25,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Shura Chen",
@@ -1337,38 +1161,16 @@
             "property": "Água 4",
             "breed": "Humanoide",
             "level": 188,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": -50
-                },
-                {
-                    "earth": 100
-                },
-                {
-                    "fire": 60
-                },
-                {
-                    "wind": 200
-                },
-                {
-                    "poison": 25
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": -50,
+            "earth": 100,
+            "fire": 60,
+            "wind": 200,
+            "poison": 25,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Guardião Real Randel",
@@ -1377,38 +1179,16 @@
             "property": "Sagrado 4",
             "breed": "Humanoide",
             "level": 188,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 0
-                },
-                {
-                    "earth": 0
-                },
-                {
-                    "fire": 0
-                },
-                {
-                    "wind": 0
-                },
-                {
-                    "poison": 0
-                },
-                {
-                    "holy": -100
-                },
-                {
-                    "dark": 200
-                },
-                {
-                    "ghost": 0
-                },
-                {
-                    "undead": 175
-                }
-            ]
+            "neutral": 100,
+            "water": 0,
+            "earth": 0,
+            "fire": 0,
+            "wind": 0,
+            "poison": 0,
+            "holy": -100,
+            "dark": 200,
+            "ghost": 0,
+            "undead": 175
         },
         {
             "name": "Feiticeira Celia",
@@ -1417,38 +1197,16 @@
             "property": "Fantasma 4",
             "breed": "Humanoide",
             "level": 188,
-            "weakness": [
-                {
-                    "neutral": 0
-                },
-                {
-                    "water": 100
-                },
-                {
-                    "earth": 100
-                },
-                {
-                    "fire": 100
-                },
-                {
-                    "wind": 100
-                },
-                {
-                    "poison": 25
-                },
-                {
-                    "holy": 100
-                },
-                {
-                    "dark": 100
-                },
-                {
-                    "ghost": 200
-                },
-                {
-                    "undead": 100
-                }
-            ]
+            "neutral": 0,
+            "water": 100,
+            "earth": 100,
+            "fire": 100,
+            "wind": 100,
+            "poison": 25,
+            "holy": 100,
+            "dark": 100,
+            "ghost": 200,
+            "undead": 100
         }
     ],
     "room_2": [
@@ -1459,38 +1217,16 @@
             "property": "Vento 4",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 60
-                },
-                {
-                    "earth": 200
-                },
-                {
-                    "fire": 100
-                },
-                {
-                    "wind": -50
-                },
-                {
-                    "poison": 75
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": 60,
+            "earth": 200,
+            "fire": 100,
+            "wind": -50,
+            "poison": 75,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Algoz Eremes",
@@ -1499,38 +1235,16 @@
             "property": "Veneno 4",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 75
-                },
-                {
-                    "earth": 75
-                },
-                {
-                    "fire": 75
-                },
-                {
-                    "wind": 75
-                },
-                {
-                    "poison": 0
-                },
-                {
-                    "holy": 125
-                },
-                {
-                    "dark": -25
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": -25
-                }
-            ]
+            "neutral": 100,
+            "water": 75,
+            "earth": 75,
+            "fire": 75,
+            "wind": 75,
+            "poison": 0,
+            "holy": 125,
+            "dark": -25,
+            "ghost": 25,
+            "undead": -25
         },
         {
             "name": "Sumo Sacerdotisa Margaretha",
@@ -1539,38 +1253,16 @@
             "property": "Sagrado 4",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 0
-                },
-                {
-                    "earth": 0
-                },
-                {
-                    "fire": 0
-                },
-                {
-                    "wind": 0
-                },
-                {
-                    "poison": 0
-                },
-                {
-                    "holy": -100
-                },
-                {
-                    "dark": 200
-                },
-                {
-                    "ghost": 0
-                },
-                {
-                    "undead": 175
-                }
-            ]
+            "neutral": 100,
+            "water": 0,
+            "earth": 0,
+            "fire": 0,
+            "wind": 0,
+            "poison": 0,
+            "holy": -100,
+            "dark": 200,
+            "ghost": 0,
+            "undead": 175
         },
         {
             "name": "Musa Trentini",
@@ -1579,38 +1271,16 @@
             "property": "Vento 4",
             "breed": "Humanoide",
             "level": 186,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 60
-                },
-                {
-                    "earth": 200
-                },
-                {
-                    "fire": 100
-                },
-                {
-                    "wind": -50
-                },
-                {
-                    "poison": 75
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": 60,
+            "earth": 200,
+            "fire": 100,
+            "wind": -50,
+            "poison": 75,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Bioquímico Flamel",
@@ -1619,38 +1289,16 @@
             "property": "Fogo 4",
             "breed": "Humanoide",
             "level": 186,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 200
-                },
-                {
-                    "earth": 60
-                },
-                {
-                    "fire": -50
-                },
-                {
-                    "wind": 100
-                },
-                {
-                    "poison": 75
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": 200,
+            "earth": 60,
+            "fire": -50,
+            "wind": 100,
+            "poison": 75,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Arcebispa Margaretha",
@@ -1659,38 +1307,16 @@
             "property": "Sagrado 4",
             "breed": "Humanoide",
             "level": 187,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 0
-                },
-                {
-                    "earth": 0
-                },
-                {
-                    "fire": 0
-                },
-                {
-                    "wind": 0
-                },
-                {
-                    "poison": 0
-                },
-                {
-                    "holy": -100
-                },
-                {
-                    "dark": 200
-                },
-                {
-                    "ghost": 0
-                },
-                {
-                    "undead": 175
-                }
-            ]
+            "neutral": 100,
+            "water": 0,
+            "earth": 0,
+            "fire": 0,
+            "wind": 0,
+            "poison": 0,
+            "holy": -100,
+            "dark": 200,
+            "ghost": 0,
+            "undead": 175
         }
     ],
     "room_3": [
@@ -1701,38 +1327,16 @@
             "property": "Veneno 4",
             "breed": "Demônio",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 75
-                },
-                {
-                    "earth": 75
-                },
-                {
-                    "fire": 75
-                },
-                {
-                    "wind": 75
-                },
-                {
-                    "poison": 0
-                },
-                {
-                    "holy": 125
-                },
-                {
-                    "dark": -25
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": -25
-                }
-            ]
+            "neutral": 100,
+            "water": 75,
+            "earth": 75,
+            "fire": 75,
+            "wind": 75,
+            "poison": 0,
+            "holy": 125,
+            "dark": -25,
+            "ghost": 25,
+            "undead": -25
         },
         {
             "name": "Criador Flamel Emul",
@@ -1741,38 +1345,16 @@
             "property": "Fogo 4",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 200
-                },
-                {
-                    "earth": 60
-                },
-                {
-                    "fire": -50
-                },
-                {
-                    "wind": 100
-                },
-                {
-                    "poison": 75
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": 200,
+            "earth": 60,
+            "fire": -50,
+            "wind": 100,
+            "poison": 75,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Lorde Seyren",
@@ -1781,38 +1363,16 @@
             "property": "Fogo 4",
             "breed": "Demônio",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 200
-                },
-                {
-                    "earth": 60
-                },
-                {
-                    "fire": -50
-                },
-                {
-                    "wind": 100
-                },
-                {
-                    "poison": 75
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": 200,
+            "earth": 60,
+            "fire": -50,
+            "wind": 100,
+            "poison": 75,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Sumo Sacerdotisa Margaretha",
@@ -1821,38 +1381,16 @@
             "property": "Sagrado 4",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 0
-                },
-                {
-                    "earth": 0
-                },
-                {
-                    "fire": 0
-                },
-                {
-                    "wind": 0
-                },
-                {
-                    "poison": 0
-                },
-                {
-                    "holy": -100
-                },
-                {
-                    "dark": 200
-                },
-                {
-                    "ghost": 0
-                },
-                {
-                    "undead": 175
-                }
-            ]
+            "neutral": 100,
+            "water": 0,
+            "earth": 0,
+            "fire": 0,
+            "wind": 0,
+            "poison": 0,
+            "holy": -100,
+            "dark": 200,
+            "ghost": 0,
+            "undead": 175
         },
         {
             "name": "Cavaleiro Rúnico Seyren",
@@ -1861,38 +1399,16 @@
             "property": "Fogo 4",
             "breed": "Humanoide",
             "level": 189,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 200
-                },
-                {
-                    "earth": 60
-                },
-                {
-                    "fire": -50
-                },
-                {
-                    "wind": 100
-                },
-                {
-                    "poison": 75
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": 200,
+            "earth": 60,
+            "fire": -50,
+            "wind": 100,
+            "poison": 75,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Renegada Gertie",
@@ -1901,38 +1417,16 @@
             "property": "Veneno 4",
             "breed": "Demônio",
             "level": 188,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 75
-                },
-                {
-                    "earth": 75
-                },
-                {
-                    "fire": 75
-                },
-                {
-                    "wind": 75
-                },
-                {
-                    "poison": 0
-                },
-                {
-                    "holy": 125
-                },
-                {
-                    "dark": -25
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": -25
-                }
-            ]
+            "neutral": 100,
+            "water": 75,
+            "earth": 75,
+            "fire": 75,
+            "wind": 75,
+            "poison": 0,
+            "holy": 125,
+            "dark": -25,
+            "ghost": 25,
+            "undead": -25
         }
     ],
     "room_4": [
@@ -1943,38 +1437,16 @@
             "property": "Veneno 4",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 75
-                },
-                {
-                    "earth": 75
-                },
-                {
-                    "fire": 75
-                },
-                {
-                    "wind": 75
-                },
-                {
-                    "poison": 0
-                },
-                {
-                    "holy": 125
-                },
-                {
-                    "dark": -25
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": -25
-                }
-            ]
+            "neutral": 100,
+            "water": 75,
+            "earth": 75,
+            "fire": 75,
+            "wind": 75,
+            "poison": 0,
+            "holy": 125,
+            "dark": -25,
+            "ghost": 25,
+            "undead": -25
         },
         {
             "name": "Atiradora de Elite Cecil",
@@ -1983,38 +1455,16 @@
             "property": "Vento 4",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 60
-                },
-                {
-                    "earth": 200
-                },
-                {
-                    "fire": 100
-                },
-                {
-                    "wind": -50
-                },
-                {
-                    "poison": 75
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": 60,
+            "earth": 200,
+            "fire": 100,
+            "wind": -50,
+            "poison": 75,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Cigana Trentini",
@@ -2023,38 +1473,16 @@
             "property": "Vento 4",
             "breed": "Humanoide",
             "level": 160,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 60
-                },
-                {
-                    "earth": 200
-                },
-                {
-                    "fire": 100
-                },
-                {
-                    "wind": -50
-                },
-                {
-                    "poison": 75
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": 60,
+            "earth": 200,
+            "fire": 100,
+            "wind": -50,
+            "poison": 75,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Sicário Eremes",
@@ -2063,38 +1491,16 @@
             "property": "Veneno 4",
             "breed": "Humanoide",
             "level": 189,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 75
-                },
-                {
-                    "earth": 75
-                },
-                {
-                    "fire": 75
-                },
-                {
-                    "wind": 75
-                },
-                {
-                    "poison": 0
-                },
-                {
-                    "holy": 125
-                },
-                {
-                    "dark": -25
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": -25
-                }
-            ]
+            "neutral": 100,
+            "water": 75,
+            "earth": 75,
+            "fire": 75,
+            "wind": 75,
+            "poison": 0,
+            "holy": 125,
+            "dark": -25,
+            "ghost": 25,
+            "undead": -25
         },
         {
             "name": "Sentinela Cecil",
@@ -2103,38 +1509,16 @@
             "property": "Vento 4",
             "breed": "Humanoide",
             "level": 189,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 60
-                },
-                {
-                    "earth": 200
-                },
-                {
-                    "fire": 100
-                },
-                {
-                    "wind": -50
-                },
-                {
-                    "poison": 75
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": 60,
+            "earth": 200,
+            "fire": 100,
+            "wind": -50,
+            "poison": 75,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         },
         {
             "name": "Trovador Alphoccio",
@@ -2143,38 +1527,16 @@
             "property": "Vento 4",
             "breed": "Humanoide",
             "level": 186,
-            "weakness": [
-                {
-                    "neutral": 100
-                },
-                {
-                    "water": 60
-                },
-                {
-                    "earth": 200
-                },
-                {
-                    "fire": 100
-                },
-                {
-                    "wind": -50
-                },
-                {
-                    "poison": 75
-                },
-                {
-                    "holy": 75
-                },
-                {
-                    "dark": 75
-                },
-                {
-                    "ghost": 25
-                },
-                {
-                    "undead": 25
-                }
-            ]
+            "neutral": 100,
+            "water": 60,
+            "earth": 200,
+            "fire": 100,
+            "wind": -50,
+            "poison": 75,
+            "holy": 75,
+            "dark": 75,
+            "ghost": 25,
+            "undead": 25
         }
     ]
 }
