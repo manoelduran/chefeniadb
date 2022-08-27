@@ -19,6 +19,7 @@ import { api, getMvps } from '../../../services/api';
 function* onLoadMvpsStartAsync() {
     try {
         const response: AxiosResponse<Mvp[]> = yield call(getMvps);
+        console.log('reduxResponse', response)
         if (response) {
             yield delay(500); // setTimeOut
             yield put(loadMvpsSuccess(response.data));

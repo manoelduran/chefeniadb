@@ -96,7 +96,7 @@ const Mvp = () => {
                         Neutro
                     </Heading>
                     <Heading color="black" fontSize="2xl" >
-                        {mvp.weakness[0].neutral}%
+                        {mvp.neutral}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
@@ -109,7 +109,7 @@ const Mvp = () => {
                         Água
                     </Heading>
                     <Heading color="white" fontSize="2xl" >
-                        {mvp.weakness[1].water}%
+                        {mvp.water}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
@@ -122,7 +122,7 @@ const Mvp = () => {
                         Terra
                     </Heading>
                     <Heading color="black" fontSize="2xl" >
-                        {mvp.weakness[2].earth}%
+                        {mvp.earth}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
@@ -135,7 +135,7 @@ const Mvp = () => {
                         Fogo
                     </Heading>
                     <Heading color="white" fontSize="2xl" >
-                        {mvp.weakness[3].fire}%
+                        {mvp.fire}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
@@ -148,7 +148,7 @@ const Mvp = () => {
                         Vento
                     </Heading>
                     <Heading color="black" fontSize="2xl" >
-                        {mvp.weakness[4].wind}%
+                        {mvp.wind}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
@@ -161,7 +161,7 @@ const Mvp = () => {
                         Veneno
                     </Heading>
                     <Heading color="black" fontSize="2xl" >
-                        {mvp.weakness[5].poison}%
+                        {mvp.poison}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
@@ -174,7 +174,7 @@ const Mvp = () => {
                         Sagrado
                     </Heading>
                     <Heading color="black" fontSize="2xl" >
-                        {mvp.weakness[6].holy}%
+                        {mvp.holy}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
@@ -187,7 +187,7 @@ const Mvp = () => {
                         Sombrio
                     </Heading>
                     <Heading color="white" fontSize="2xl" >
-                        {mvp.weakness[7].dark}%
+                        {mvp.dark}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
@@ -200,7 +200,7 @@ const Mvp = () => {
                         Fantasma
                     </Heading>
                     <Heading color="black" fontSize="2xl" >
-                        {mvp.weakness[8].ghost}%
+                        {mvp.ghost}%
                     </Heading>
                 </HStack>
                 <HStack w="full"
@@ -213,7 +213,7 @@ const Mvp = () => {
                         Morto-Vivo
                     </Heading>
                     <Heading color="white" fontSize="2xl" >
-                        {mvp.weakness[9].undead}%
+                        {mvp.undead}%
                     </Heading>
                 </HStack>
             </ScrollView>
