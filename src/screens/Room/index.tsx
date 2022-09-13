@@ -2,6 +2,8 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import { FlatList, VStack, Text, Heading, HStack, IconButton, useTheme, ChevronLeftIcon, Box, View, Icon, ScrollView } from 'native-base';
 import { CaretLeft, MagnifyingGlass, SignOut } from 'phosphor-react-native';
 import React, { useCallback, useEffect, useState } from 'react';
+import { Dimensions } from 'react-native';
+import { SceneMap, TabView } from 'react-native-tab-view';
 import { useDispatch, useSelector } from 'react-redux';
 import { RoomNavigationProps } from '../../@types/navigation';
 import Input from '../../components/Input';
@@ -15,12 +17,20 @@ import { MvpsState } from '../../store/modules/mvps/types';
 import { loadSpecificMvpsStart } from '../../store/modules/specificMvps/actions';
 import { SpecificMvpsState } from '../../store/modules/specificMvps/types';
 import ApplicationState from '../../store/types/ApplicationState';
+import { General } from './components/General';
+import { Specific } from './components/Specific';
 
 const Room: React.FC = () => {
     const dispatch = useDispatch();
     const route = useRoute();
     const { room } = route.params as RoomNavigationProps;
     const [selectedMvpData, setSelectedMvpData] = useState<Mvp | undefined>(undefined);
+    const initialLayout = { width: Dimensions.get('window').width };
+    const [index, setIndex] = React.useState(0);
+    const [routes] = React.useState([
+        { key: 'first', title: 'Comuns' },
+        { key: 'second', title: 'Específicos' },
+    ]);
     const navigation = useNavigation();
     const { colors } = useTheme();
     const goBack = () => {
@@ -123,8 +133,19 @@ const Room: React.FC = () => {
                 </Box>
             ) : (
                 <>
-                    {mvps &&
-                        <Box flex={1} pt={4} pb={4} px={4} >
+                    <TabView
+                        navigationState={{ index, routes }}
+                        onIndexChange={setIndex}
+                        renderScene={SceneMap<any>({
+                            first:() =>  General({mvps, selectedMvp}),
+                            second: () => Specific({specificMvps, selectedMvp}),
+                        })}
+                        style={{flex: 1 , width: '100%', padding: 16, paddingBottom: 0}}
+                    />
+                {/*    {mvps &&
+                        <Box flex={1} pt={4} pb={4} px={4}  >
+
+
                             <FlatList
                                 style={{ flex: 1 }}
                                 data={mvps}
@@ -134,6 +155,7 @@ const Room: React.FC = () => {
                                 renderItem={({ item, index }) => (
                                     <MvpCard key={index} mvp={item} onPress={() => selectedMvp(item)} />
                                 )}
+
                             />
                         </Box>
                     }
@@ -158,7 +180,7 @@ const Room: React.FC = () => {
                                 )}
                             />
                         </Box>
-                    }
+                    } */}
                 </>
             )
             }
