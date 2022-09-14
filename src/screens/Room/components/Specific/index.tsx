@@ -8,11 +8,12 @@ interface SpecificProps {
 }
 const Specific = ({ specificMvps, selectedMvp }: SpecificProps) => {
     return (
-        <Box flex={1} pt={4} pb={4} px={4} bgColor="blue.500" >
+        <Box flex={1} pt={4} pb={4} px={4}  >
             <FlatList
                 style={{ flex: 1 }}
                 data={specificMvps}
                 keyExtractor={(item) => item.name}
+                initialNumToRender={3}
                 contentContainerStyle={{ paddingBottom: 100 }}
                 showsVerticalScrollIndicator={false}
                 renderItem={({ item, index }) => (

@@ -25,12 +25,12 @@ const Room: React.FC = () => {
     const route = useRoute();
     const { room } = route.params as RoomNavigationProps;
     const [selectedMvpData, setSelectedMvpData] = useState<Mvp | undefined>(undefined);
-    const initialLayout = { width: Dimensions.get('window').width };
-    const [index, setIndex] = React.useState(0);
-    const [routes] = React.useState([
+    const [index, setIndex] = useState(0);
+    const [routes] = useState([
         { key: 'first', title: 'Comuns' },
         { key: 'second', title: 'Específicos' },
     ]);
+
     const navigation = useNavigation();
     const { colors } = useTheme();
     const goBack = () => {
@@ -136,11 +136,29 @@ const Room: React.FC = () => {
                     <TabView
                         navigationState={{ index, routes }}
                         onIndexChange={setIndex}
+                        lazy
+                        renderTabBar={() => {
+                            return (
+                              <HStack
+                              w="full"
+                              justifyContent="space-around"
+                              alignItems="center"
+                              pt={3}
+                              px={10}>
+                                <Heading color={index === 0 ? "error.500" : "success.500"} fontSize="xl" >
+                                Comuns
+                              </Heading>
+                              <Heading color={index === 1 ? "error.500" : "success.500"} fontSize="xl" >
+                                Específicos
+                              </Heading>
+                              </HStack>
+                            )
+                          }}
                         renderScene={SceneMap<any>({
                             first:() =>  General({mvps, selectedMvp}),
                             second: () => Specific({specificMvps, selectedMvp}),
                         })}
-                        style={{flex: 1 , width: '100%', padding: 16, paddingBottom: 0}}
+                        style={{flex: 1 , width: '100%'}}
                     />
                 {/*    {mvps &&
                         <Box flex={1} pt={4} pb={4} px={4}  >

@@ -8,11 +8,12 @@ interface GeneralProps {
 }
 const General = ({ mvps, selectedMvp }: GeneralProps) => {
     return (
-        <Box flex={1} pt={4} pb={4} px={4} bgColor="red.500" >
+        <Box flex={1} pt={4} pb={4} px={4}  >
             <FlatList
                 style={{ flex: 1 }}
                 data={mvps}
                 keyExtractor={(item) => item.name}
+                initialNumToRender={3}
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={{ paddingBottom: 100 }}
                 renderItem={({ item, index }) => (
