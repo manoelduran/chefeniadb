@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { Heading, Icon, VStack, useTheme, Image } from 'native-base';
 import { AppWindow, Envelope, Key } from 'phosphor-react-native';
 import Input from '../../components/Input';
@@ -6,19 +6,25 @@ import chefeniaPng from '../../assets/chefenia.png';
 import Button from '../../components/Button';
 import { useNavigation } from '@react-navigation/native';
 import * as api from '../../services/api';
+import { FormHandles } from '@unform/core';
 
 
 
 const SignIn: React.FC = () => {
   const { colors } = useTheme();
+  const formRef = useRef<FormHandles>(null);
   const navigate = useNavigation();
   const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
   const [password, setPassword] = useState('');
   const handleSignIn = useCallback(async (data: FormUser) => {
     try {
+      setLoading(true);
       // await api.createUser(data);
     } catch (error: any) {
       return error.message;
+    } finally {
+      setLoading(false);
     }
   }, [])
   return (

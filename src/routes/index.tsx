@@ -12,7 +12,7 @@ const Routes = () => {
     }
     return (
         <NavigationContainer>
-            {user.id ? (
+            {!user.id ? (
                 <AppRoutes />
             )
                 :

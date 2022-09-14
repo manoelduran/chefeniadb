@@ -116,7 +116,7 @@ const Room: React.FC = () => {
             <Box w="full" pt={4} pb={2} px={4}  >
                 <Input
                     placeholder="Pesquise seu mvp"
-
+                    
 
                     _focus={{
                         borderWidth: 1,
