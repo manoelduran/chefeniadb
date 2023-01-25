@@ -1,19 +1,24 @@
 import React, { useCallback, useRef, useState } from 'react';
-import { Heading, Icon, VStack, useTheme, Image, KeyboardAvoidingView, ScrollView } from 'native-base';
 import { AppWindow, Envelope, Key } from 'phosphor-react-native';
-import chefeniaPng from '../../assets/chefenia.png';
+import chefeniaSvg from '../../assets/chefenia.png';
 import Button from '../../components/Button';
 import { useNavigation } from '@react-navigation/native';
-import * as api from '../../services/api';
 import { FormHandles } from '@unform/core';
 import Input from '../../components/Input';
-import { FormContainer } from './styles';
-import { Platform } from 'react-native';
+import {
+  FormContainer,
+  Container,
+  KeyBoardAvoidContainer,
+  ScrollContainer,
+  Banner
+} from './styles';
+import {  Platform  } from 'react-native';
+import { useTheme } from 'styled-components/native';
 
 
 
 const SignIn: React.FC = () => {
-  const { colors } = useTheme();
+  const theme = useTheme();
   const formRef = useRef<FormHandles>(null);
   const navigate = useNavigation();
   const [loading, setLoading] = useState(false);
@@ -29,11 +34,25 @@ const SignIn: React.FC = () => {
     }
   }, [])
   return (
+    <Container  >
+      <KeyBoardAvoidContainer behavior={Platform.OS === "ios" ? "padding" : "height"}>
+        <ScrollContainer>
+        <Banner source={chefeniaSvg} resizeMode="cover"  />
+        </ScrollContainer>
+ 
+      </KeyBoardAvoidContainer>
+    </Container>
+  );
+}
 
-    <VStack flex={1} w="full" alignItems="center" bg="black" px={8} pt={24}>
-      <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"}>
-        <ScrollView  >
-          <Image source={chefeniaPng} width={300} height={180} alt="Chefenia Banner" />
+export default SignIn;
+
+
+
+
+/*
+
+        <  >
           <Heading color="success.500" fontSize="2xl" mt={20} mb={6} textAlign="center">
             Chefenia DB
           </Heading>
@@ -69,10 +88,4 @@ const SignIn: React.FC = () => {
 
           </FormContainer>
         </ScrollView>
-      </KeyboardAvoidingView>
-    </VStack>
-
-  );
-}
-
-export default SignIn;
+      */
