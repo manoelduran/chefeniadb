@@ -1,6 +1,6 @@
-import { extendTheme } from 'native-base';
 
-export const THEME = extendTheme({
+
+const theme =  ({
     colors: {
         success: {
             600: '#16a34a',
@@ -35,3 +35,5 @@ export const THEME = extendTheme({
         14: 56
     }
 });
+
+export {theme}
