@@ -1,11 +1,14 @@
+import { Spinner } from 'phosphor-react-native';
 import React from 'react';
-import { Center, Spinner } from 'native-base';
+import {
+Container
+} from './styles';
 
 const Loading = () => {
     return (
-        <Center flex={1} bg='black'>
+        <Container >
             <Spinner color='white'/>
-        </Center>
+        </Container>
     );
 };
 
