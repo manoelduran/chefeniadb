@@ -1,12 +1,17 @@
+
 import { useField } from '@unform/core';
-import { Input as NativeBaseInput, IInputProps, useTheme } from 'native-base';
 import React, { useCallback, useRef, useState, useEffect } from 'react';
 import {
   NativeSyntheticEvent,
   TextInputFocusEventData,
+  TextInputProps,
 } from 'react-native';
+import { useTheme } from 'styled-components/native';
+import {
+  InputStyle
+} from './styles';
 
-interface InputProps extends IInputProps {
+interface InputProps extends TextInputProps {
   background?: string;
   icon?: string;
   name: string;
@@ -23,7 +28,7 @@ const Input: React.FC<InputProps> = ({
   onFocus,
   ...rest
 }) => {
-  const { colors } = useTheme();
+  const theme = useTheme();
   const [isFocused, setIsFocused] = useState(false);
 
   const inputRef = useRef<any>(null);
@@ -89,19 +94,13 @@ const Input: React.FC<InputProps> = ({
 
 
   return (
-    <NativeBaseInput
-      bg="gray.600"
+    <InputStyle
       ref={inputRef}
-      h={14}
-      size="md"
-      borderWidth={0}
-      fontSize="md"
-      fontFamily="body"
-      color="white"
-      placeholderTextColor="gray.400"
+      icon={icon}
       onChangeText={handleChangeText}
       onFocus={handleInputFocus}
       defaultValue={value}
+      placeholderTextColor={theme.colors.white}
       onBlur={onBlur || handleInputBlur}
       maxLength={maxLength || inputRef?.current?.maxLength}
       {...rest}
