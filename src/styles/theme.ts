@@ -26,10 +26,10 @@ const theme =  ({
         primary_600: 'Inter_600SemiBold'
     },
     fontSizes: {
-        xs: 12,
-        sm: 14,
-        md: 16,
-        lg: 20,
+        xs: '12px',
+        sm: '14px',
+        md: '16px',
+        lg: '20px',
     },
     sizes: {
         14: 56
