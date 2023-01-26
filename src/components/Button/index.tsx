@@ -1,21 +1,21 @@
-import { Button as NativeBaseButton, IButtonProps, Heading } from 'native-base';
+import React from "react";
+import { ButtonProps } from "react-native";
+import {
+    ButtonStyle,
+    ButtonText
+} from './styles';
 
-interface Props extends IButtonProps {
+interface Props extends ButtonProps {
     title: string;
 }
 
-const Button = ({ title, ...rest }: Props) => {
+const Button: React.FC<Props>  = ({title, ...rest}) => {
     return (
-        <NativeBaseButton
-            bg="success.600"
-            h={14}
-            fontSize="sm"
-            rounded="sm"
-            _pressed={{ bg: "green.500" }}
+        <ButtonStyle
             {...rest}
         >
-            <Heading color="white" fontSize="sm">{title}</Heading>
-        </NativeBaseButton>
+           <ButtonText>{title}</ButtonText> 
+        </ButtonStyle>
     );
 };
 
