@@ -19,7 +19,5 @@ ${({ theme }) => css`
 color:  ${theme.colors.white};
 font-size:  ${theme.fontSizes.sm};
 font-family: ${theme.fonts.primary_600};
-
 `};
-
 `;

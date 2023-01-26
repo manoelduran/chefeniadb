@@ -20,6 +20,7 @@ import {
 } from './styles';
 import { Alert, Platform } from 'react-native';
 import { useTheme } from 'styled-components/native';
+import * as api from '../../services/api';
 
 
 
@@ -32,7 +33,7 @@ const SignIn: React.FC = () => {
     try {
       setLoading(true);
       console.log('data', data)
-      // await api.createUser(data);
+       await api.authUser(data);
     } catch (error: any) {
       return error.message;
     } finally {

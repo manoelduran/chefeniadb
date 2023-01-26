@@ -15,7 +15,8 @@ export const getMvp = async (name: string) => {
     return response;
 };
 
-// export const createUser = async (data: FormUser) => {
-//     const response = await api.post("/users", data);
-//     return response;
-// }
+ export const authUser = async (data: FormUser) => {
+    const response = await api.post("/session", data);
+    console.log('response', response.data)
+     return response;
+ }
