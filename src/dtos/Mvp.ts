@@ -3,10 +3,11 @@ interface Mvp {
     quantity: number;
     image?: string;
     property: string;
+    respawn: string;
     breed: string;
     level: number;
     neutral: number;
-    water: number;
+    water: number
     earth: number;
     fire: number;
     wind: number;
