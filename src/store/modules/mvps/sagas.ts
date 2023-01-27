@@ -14,11 +14,13 @@ import {
 } from './actions';
 import { AxiosResponse } from 'axios';
 import { api, getMvpsByRoomId } from '../../../services/api';
+import { onSendCallForShowMvpStart } from '../mvps/types';
 
 
-function* onLoadMvpsStartAsync() {
+function* onLoadMvpsStartAsync({ payload }: onSendCallForShowMvpStart) {
+    const { room_id } = payload;
     try {
-        const response: AxiosResponse<Mvp[]> = yield call(getMvpsByRoomId);
+        const response: AxiosResponse<Mvp[]> = yield call(getMvpsByRoomId, room_id);
         console.log('reduxResponse', response)
         if (response) {
             yield delay(500); // setTimeOut

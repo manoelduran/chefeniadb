@@ -1,9 +1,13 @@
 import * as types from './types';
 
-export const loadMvpsStart = (mvps: Mvp[]) => {
+export const loadMvpsStart = (room_id: string, mvps: Mvp[]) => {
+    console.log('room_id', room_id)
     return {
         type: types.LOAD_MVPS_START,
-        payload: mvps,
+        payload: {
+            room_id,
+            mvps
+        },
     }
 };
 
