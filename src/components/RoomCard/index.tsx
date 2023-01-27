@@ -1,25 +1,19 @@
 import React from "react";
-import ChefeniaMapPng from '../../assets/chefeniamap.png';
 import { TouchableOpacityProps } from "react-native";
 import {
     Container,
-    Content,
     Title,
-    BackgroundImage
 } from './styles';
 
-interface RoomCardProps {
+interface RoomCardProps extends TouchableOpacityProps {
     title: string;
     onPress: () => void;
 };
 
-const RoomCard: React.FC<RoomCardProps> = ({ title, onPress }) => {
+const RoomCard: React.FC<RoomCardProps> = ({ title, onPress, ...rest }) => {
     return (
-        <Container onPress={onPress}>
-            <Content >
-                <Title>{title}</Title>
-                <BackgroundImage source={ChefeniaMapPng} resizeMode="cover" alt="Room Map" />
-            </Content>
+        <Container onPress={onPress} {...rest}>
+            <Title>{title}</Title>
         </Container>
     );
 };

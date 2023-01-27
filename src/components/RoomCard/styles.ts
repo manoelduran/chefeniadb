@@ -1,21 +1,19 @@
-import styled, {css} from "styled-components/native";
+import styled from "styled-components/native";
 
 
 export const Container = styled.TouchableOpacity`
 flex: 1;
+display: flex;
+border: 2px;
+border-color: ${({ theme }) => theme.colors.success[600]};
+border-radius: 7px;
 background: transparent;
+margin-bottom: 5px;
 `;
-export const Content = styled.View`
-align-items: center;
-justify-content: center;
-`;
+
 export const Title = styled.Text`
 text-align: center;
-//margin-top: 120px;
-font-family: ${({theme}) => theme.fonts.primary_600};
+font-family: ${({ theme }) => theme.fonts.primary_600};
 font-size: 20px;
-
-color: ${({theme}) => theme.colors.success[600]};
-`;
-export const BackgroundImage = styled.Image`
+color: ${({ theme }) => theme.colors.success[600]};
 `;
