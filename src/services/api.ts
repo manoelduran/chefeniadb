@@ -10,13 +10,19 @@ export const getMvpsByRoomId = async (room_id: string) => {
     return response;
 };
 
+export const getRooms = async () => {
+    const response = await api.get("/rooms");
+    console.log('response', response)
+    return response;
+};
+
 export const getMvp = async (name: string) => {
     const response = await api.get(`/mvps/${name}`);
     return response;
 };
 
- export const authUser = async (data: FormUser) => {
+export const authUser = async (data: FormUser) => {
     const response = await api.post("/session", data);
     console.log('response', response.data)
-     return response;
- }
+    return response;
+}
