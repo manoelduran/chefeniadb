@@ -54,11 +54,9 @@ const SignIn: React.FC = () => {
             />
             <Input
               name="password"
-              placeholder="Senha"
+              placeholder="Password"
               secureTextEntry
               style={{ marginBottom: 15 }}
-              icon='key'
-
             />
             <FooterContainer>
               <CreateAccount onPress={() => { }} >
@@ -69,7 +67,7 @@ const SignIn: React.FC = () => {
               </ForgotPasswordButton>
             </FooterContainer>
             <Button
-              title='Entrar'
+              title='Login'
               onPress={() => formRef.current?.submitForm()}
             />
 
