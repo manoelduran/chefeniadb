@@ -1,5 +1,4 @@
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { VStack, Text, IconButton, HStack, useTheme, Heading, Image, Center, ScrollView } from 'native-base';
 import { CaretLeft } from 'phosphor-react-native';
 import React from 'react';
 import { MvpNavigationProps } from '../../@types/navigation';
