@@ -1,11 +1,12 @@
+import { IconProps } from "phosphor-react-native";
 import React from "react";
-import { ButtonProps } from "react-native";
+import { TouchableOpacityProps } from "react-native";
 import {
     ButtonStyle,
     ButtonText
 } from './styles';
 
-interface Props extends ButtonProps {
+interface Props extends TouchableOpacityProps {
     title: string;
 }
 
