@@ -1,9 +1,6 @@
 interface Room {
+    id?: string;
     name: string;
+    created_at?: Date;
+    updated_at?: Date;
 }
-
-// "splash": {
-//     "image": "./assets/splash.png",
-//     "resizeMode": "contain",
-//     "backgroundColor": "#ffffff"
-//   },
