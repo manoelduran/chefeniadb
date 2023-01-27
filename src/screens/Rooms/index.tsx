@@ -1,50 +1,68 @@
-import React, { useCallback, useState } from 'react';
-import { HStack, useTheme, VStack, IconButton, Heading, ScrollView } from 'native-base';
-import { SignOut } from 'phosphor-react-native';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import RoomCard from '../../components/RoomCard';
+import {
+  Container,
+  KeyBoardAvoidContainer,
+  LogoutContainer,
+  Title,
+  RoomsData
+} from './styles';
 import { useNavigation } from '@react-navigation/native';
-
+import { useTheme } from 'styled-components/native';
+import { Platform } from 'react-native';
+import IconButton from '../../components/IconButton';
+import { useDispatch, useSelector } from 'react-redux';
+import ApplicationState from '../../store/types/ApplicationState';
+import { RoomsState } from '../../store/modules/rooms/types';
+import { loadRoomsStart } from '../../store/modules/rooms/actions';
+import Loading from '../../components/Loading';
 
 const Rooms = () => {
-  const { colors } = useTheme();
+  const theme = useTheme()
+  const dispatch = useDispatch();
   const navigation = useNavigation();
-  const [room, setRoom] = useState<'room_1' | 'room_2' | 'room_3' | 'room_4' | ''>('');
-  const selectedRoom = useCallback((room: 'room_1' | 'room_2' | 'room_3' | 'room_4' | '') => {
-    if (room !== '') {
-      setRoom(room);
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState()
+  const { rooms, isLoading } = useSelector<ApplicationState, RoomsState>(applicationState => applicationState.rooms);
+
+  useEffect(() => {
+    dispatch(loadRoomsStart(rooms))
+  }, []);
+  const selectedRoom = useCallback((room_id: string) => {
+    console.log('room_id', room_id)
+    if (room_id) {
       navigation.navigate('room', {
-        room
+        room_id
       })
     }
-  }, [room])
+  }, [])
   const goBack = () => {
     navigation.goBack();
   };
+  console.log('rooms', rooms)
   return (
-    <VStack flex={1} pb={6} bg="black">
-      <HStack
-        w="full"
-        justifyContent="space-between"
-        alignItems="center"
-        bg="gray.700"
-        pt={12}
-        pb={5}
-        px={6}
-      >
-        <Heading color="success.500" fontSize="2xl" >
-          Escolha sua sala
-        </Heading>
-        <IconButton onPress={goBack}
-          icon={<SignOut size={26} color={colors.gray[400]} />}
-        />
-      </HStack>
-      <ScrollView >
-        <RoomCard title='Sala 1' onPress={() => selectedRoom('room_1')} />
-        <RoomCard title='Sala 2' onPress={() => selectedRoom('room_2')} />
-        <RoomCard title='Sala 3' onPress={() => selectedRoom('room_3')} />
-        <RoomCard title='Sala 4' onPress={() => selectedRoom('room_4')} />
-      </ScrollView>
-    </VStack>
+    <Container>
+      <KeyBoardAvoidContainer behavior={Platform.OS === "ios" ? "padding" : "height"}>
+        <LogoutContainer>
+          <Title>Choose your Room</Title>
+          <IconButton onPress={goBack} icon='logout' color={theme.colors.success[600]} />
+        </LogoutContainer>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <RoomsData
+            style={{ flex: 1 }}
+            data={rooms}
+            keyExtractor={(item: Room) => item.id}
+            showsVerticalScrollIndicator={false}
+            renderItem={({ item, index }) => (
+              <RoomCard key={index} title={item.name} onPress={() => selectedRoom(item.id)} />
+            )}
+
+          />
+        )}
+      </KeyBoardAvoidContainer>
+    </Container>
   );
 };
 
