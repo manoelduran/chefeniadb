@@ -7,9 +7,9 @@ import { SpecificMvpsState } from "../modules/specificMvps/types";
 interface ApplicationState {
   mvps: MvpsState;
   rooms: RoomsState;
-  specificMvps: SpecificMvpsState;
+ // specificMvps: SpecificMvpsState;
   mvp: MvpState;
-  filterMvp: FilterMvpState;
+ // filterMvp: FilterMvpState;
 }
 
 export default ApplicationState;
