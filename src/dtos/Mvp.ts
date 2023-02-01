@@ -2,6 +2,7 @@ interface Mvp {
     name: string;
     quantity: number;
     image?: string;
+    mvp_url?: string;
     property: string;
     respawn: string;
     breed: string;
