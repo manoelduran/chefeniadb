@@ -44,7 +44,7 @@ const Room: React.FC = () => {
         navigation.goBack();
     };
     const { mvps, isLoading, error } = useSelector<ApplicationState, MvpsState>(applicationState => applicationState.mvps);
-    const { mvp } = useSelector<ApplicationState, FilterMvpState>(applicationState => applicationState.filterMvp);
+   //const { mvp } = useSelector<ApplicationState, FilterMvpState>(applicationState => applicationState.filterMvp);
     console.log('mvps', mvps)
 
     const onFilterChange = (name: string) => {

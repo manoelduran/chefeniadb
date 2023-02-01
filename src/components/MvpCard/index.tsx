@@ -7,6 +7,7 @@ import {
     Container,
     Content,
     MvpImage,
+    MvpInfo,
     MvpInfoContainer,
     NameContainer
 } from './styles';
@@ -18,27 +19,24 @@ interface MvpCardProps extends TouchableOpacityProps {
 
 const MvpCard: React.FC<MvpCardProps> = ({ mvp, onPress, ...rest }) => {
     const theme = useTheme()
+    console.log('mvp', mvp.mvp_url)
     return (
         <Container onPress={onPress} {...rest}>
 
             <Content >
-                <MvpImage alt={mvp.name} source={{
-                    uri: mvp.image
-                }} fallbackSource={{
-                    uri: FallbackImage
-                }} />
+                <MvpImage source={mvp.mvp_url} resizeMode="cover"  alt={mvp.image}  />
                 <MvpInfoContainer   >
                     <NameContainer >
                         <Skull
-                            size={20} color={theme.colors.success[500]}
+                            size={20} color={theme.colors.success[600]}
                         />
-                        <Text>{mvp.name}</Text>
+                        <MvpInfo>{mvp.name}</MvpInfo>
                     </NameContainer>
                     <NameContainer style={{ marginTop: 10 }}>
                         <Sword
-                            size={20} color={theme.colors.success[500]}
+                            size={20} color={theme.colors.success[600]}
                         />
-                        <Text>{mvp.breed}</Text>
+                        <MvpInfo>{mvp.breed}</MvpInfo>
                     </NameContainer>
                 </MvpInfoContainer>
             </Content>
