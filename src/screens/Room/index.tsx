@@ -46,7 +46,6 @@ const Room: React.FC = () => {
     const { mvps, isLoading, error } = useSelector<ApplicationState, MvpsState>(applicationState => applicationState.mvps);
    //const { mvp } = useSelector<ApplicationState, FilterMvpState>(applicationState => applicationState.filterMvp);
     console.log('mvps', mvps)
-
     const onFilterChange = (name: string) => {
         /* 
        if (room === "room_1") {
