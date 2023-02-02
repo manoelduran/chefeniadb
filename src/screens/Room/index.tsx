@@ -8,14 +8,9 @@ import IconButton from '../../components/IconButton';
 import Input from '../../components/Input';
 import Loading from '../../components/Loading';
 import MvpCard from '../../components/MvpCard';
-import { loadFilterMvpStart } from '../../store/modules/filterMvp/actions';
-import { FilterMvpState } from '../../store/modules/filterMvp/types';
 import { loadMvpsStart } from '../../store/modules/mvps/actions';
 import { MvpsState } from '../../store/modules/mvps/types';
-import { loadSpecificMvpsStart } from '../../store/modules/specificMvps/actions';
-import { SpecificMvpsState } from '../../store/modules/specificMvps/types';
 import ApplicationState from '../../store/types/ApplicationState';
-
 import {
     Container,
     FormContainer,
@@ -30,75 +25,39 @@ const Room: React.FC = () => {
     const route = useRoute();
     const formRef = useRef<FormHandles>(null);
     const { room } = route.params as RoomNavigationProps;
-    console.log('room', room)
-    const [selectedMvpData, setSelectedMvpData] = useState<Mvp | undefined>(undefined);
-    const [index, setIndex] = useState(0);
-    const [routes] = useState([
-        { key: 'first', title: 'Comuns' },
-        { key: 'second', title: 'Específicos' },
-    ]);
-
+    const [selectedMvpData, setSelectedMvpData] = useState<Mvp[] | undefined>(undefined);
+    const [search, setSearch] = useState('');
     const navigation = useNavigation();
     const theme = useTheme();
     const goBack = () => {
         navigation.goBack();
     };
     const { mvps, isLoading, error } = useSelector<ApplicationState, MvpsState>(applicationState => applicationState.mvps);
-   //const { mvp } = useSelector<ApplicationState, FilterMvpState>(applicationState => applicationState.filterMvp);
-    console.log('mvps', mvps)
-    const onFilterChange = (name: string) => {
-        /* 
-       if (room === "room_1") {
-           const selected = mvps.find(mvp => mvp.name === name)
-           const selectedspecificMvps = specificMvps.find(mvp => mvp.name === name)
-           setSelectedMvpData(selected || selectedspecificMvps);
-           dispatch(loadFilterMvpStart(name, mvp));
-           return
-       }
-       if (room === "room_2") {
-           const selected = mvps.find(mvp => mvp.name === name)
-           const selectedspecificMvps = specificMvps.find(mvp => mvp.name === name)
-           setSelectedMvpData(selected || selectedspecificMvps);
-           dispatch(loadFilterMvpStart(name, mvp));
-           return
-       }
-       if (room === "room_3") {
-           const selected = mvps.find(mvp => mvp.name === name)
-           const selectedspecificMvps = specificMvps.find(mvp => mvp.name === name)
-           setSelectedMvpData(selected || selectedspecificMvps);
-           dispatch(loadFilterMvpStart(name, mvp));
-           return
-       }
-       if (room === "room_4") {
-           const selected = mvps.find(mvp => mvp.name === name)
-           const selectedspecificMvps = specificMvps.find(mvp => mvp.name === name)
-           setSelectedMvpData(selected || selectedspecificMvps);
-           dispatch(loadFilterMvpStart(name, mvp));
-           return
-       }
-        */
-    };
 
     useEffect(() => {
         dispatch(loadMvpsStart(String(room?.id), mvps))
     }, []);
-    /* 
-    useEffect(() => {
-        dispatch(loadSpecificMvpsStart(room, specificMvps))
-    }, [room])
-    */ 
+    const filteredMvp = useCallback((search: string) => {
+        try {
+            const mvp = mvps.filter(mvp => mvp.name.includes(search))
+            setSelectedMvpData(mvp)
+            setSearch(search)
+        } catch (error) {
+            console.log('error', error)
+        }
+    }, [])
+    const selectedMvp = useCallback((mvp: Mvp) => {
+        navigation.navigate('mvp', {
+            mvp
+        })
+    }, [])
 
-    /* const selectedMvp = useCallback((mvp: Mvp) => {
-         navigation.navigate('mvp', {
-             mvp
-         })
-     }, [])
-     if (isLoading) {
-         return (
-             <Loading />
-         );
-     };
-     */
+    if (isLoading) {
+        return (
+            <Loading />
+        );
+    };
+
     return (
         <Container >
             <LogoutContainer>
@@ -108,17 +67,27 @@ const Room: React.FC = () => {
             <FormContainer ref={formRef} onSubmit={() => { }}>
                 <Input
                     name="search"
+                    onChangeText={(search) => filteredMvp(search)}
                     placeholder="Search a Mvp"
-
                 />
             </FormContainer>
-            {/* 
-            {selectedMvpData ? (
+
+            {selectedMvpData && search !== '' ? (
                 <RoomsContainer  >
-                    <MvpCard key={selectedMvpData.name} mvp={selectedMvpData} onPress={() => { }} />
+                      <MvpsData
+                    style={{ flex: 1 }}
+                    data={selectedMvpData}
+                    keyExtractor={(item: Mvp) => item.name}
+                    initialNumToRender={3}
+                    showsVerticalScrollIndicator={false}
+                    contentContainerStyle={{ paddingBottom: 100 }}
+                    renderItem={({ item, index }) => (
+                        <MvpCard key={index} mvp={item} onPress={() => selectedMvp(item)} />
+                    )}
+                />
                 </RoomsContainer>
             ) : (
-            */}
+
                 <MvpsData
                     style={{ flex: 1 }}
                     data={mvps}
@@ -127,14 +96,10 @@ const Room: React.FC = () => {
                     showsVerticalScrollIndicator={false}
                     contentContainerStyle={{ paddingBottom: 100 }}
                     renderItem={({ item, index }) => (
-                        <MvpCard key={index} mvp={item} onPress={() => { }} />
+                        <MvpCard key={index} mvp={item} onPress={() => selectedMvp(item)} />
                     )}
                 />
-           {/*
-         )
-            }   
-        */}
-
+            )}
 
         </Container >
     );
