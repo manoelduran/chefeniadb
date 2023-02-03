@@ -17,7 +17,7 @@ const Mvp = () => {
             <ScrollContainer>
             <LogoutContainer>
                 <Title>{mvp.name}</Title>
-                <IconButton onPress={goBack} color={theme.colors.gray[400]} icon='logout' />
+                <IconButton onPress={goBack} color={theme.colors.gray[400]} icon='arrow-back' />
             </LogoutContainer>
                 </ScrollContainer>
                 </Container>

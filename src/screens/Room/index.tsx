@@ -62,7 +62,7 @@ const Room: React.FC = () => {
         <Container >
             <LogoutContainer>
                 <Title>Mvps from {room.name}</Title>
-                <IconButton onPress={goBack} color={theme.colors.gray[400]} icon='logout' />
+                <IconButton onPress={goBack} color={theme.colors.gray[400]} icon='arrow-back' />
             </LogoutContainer>
             <FormContainer ref={formRef} onSubmit={() => { }}>
                 <Input
