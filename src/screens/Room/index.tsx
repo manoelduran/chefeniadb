@@ -17,7 +17,8 @@ import {
     LogoutContainer,
     RoomsContainer,
     MvpsData,
-    Title
+    Title,
+    IconContainer
 } from './styles';
 
 const Room: React.FC = () => {
@@ -61,8 +62,10 @@ const Room: React.FC = () => {
     return (
         <Container >
             <LogoutContainer>
-                <Title>Mvps from {room.name}</Title>
+              <IconContainer>
                 <IconButton onPress={goBack} color={theme.colors.gray[400]} icon='arrow-back' />
+                </IconContainer>
+                <Title>Mvps from {room.name}</Title>
             </LogoutContainer>
             <FormContainer ref={formRef} onSubmit={() => { }}>
                 <Input
