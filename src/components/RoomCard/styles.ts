@@ -4,16 +4,20 @@ import styled from "styled-components/native";
 export const Container = styled.TouchableOpacity`
 flex: 1;
 display: flex;
-border: 2px;
-border-color: ${({ theme }) => theme.colors.success[600]};
+mix-blend-mode: normal;
+background: #213791;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 7px;
-background: transparent;
 margin-bottom: 5px;
 `;
 
 export const Title = styled.Text`
+//font-family: 'Archivo Black';
+font-style: normal;
+font-size: 25px;
 text-align: center;
-font-family: ${({ theme }) => theme.fonts.primary_600};
-font-size: 20px;
-color: ${({ theme }) => theme.colors.success[600]};
+
+color: #FFFFFF;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
