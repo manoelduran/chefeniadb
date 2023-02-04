@@ -5,23 +5,23 @@ export const Container = styled.TouchableOpacity`
 display: flex;
 flex-direction: column;
 
-border: 1px;
 border-color: ${({ theme }) => theme.colors.success[600]};
-border-radius: 5px;
+border-radius: 25px;
 background: transparent;
 margin-top: 20px;
 margin-bottom: 5px;
 `;
 export const Content = styled.View`
 height: 150px;
-background-color: black;
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
-padding-left: 10px;
-//padding: 20px;
-border-color: ${({ theme }) => theme.colors.success[600]};
+mix-blend-mode: normal;
+background: #213791;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 25px;
+padding: 20px;
 `;
 
 export const MvpInfoContainer = styled.View`
@@ -42,6 +42,15 @@ justify-items: center;
 `;
 
 export const MvpInfo = styled.Text`
-color: ${({ theme }) => theme.colors.success[600]};
+//font-family: 'Archivo Black';
+font-style: normal;
+font-weight: 400;
+margin-top: 5px;
+font-size: 20px;
+line-height: 22px;
+text-align: center;
 
+color: #FFFFFF;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
