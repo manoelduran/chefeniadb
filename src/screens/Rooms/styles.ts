@@ -21,6 +21,14 @@ align-items: center;
 justify-content: space-between;
 `;
 
+export const IconContainer = styled.View`
+background-color: #213790;
+mix-blend-mode: normal;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+padding: 5px;
+border-radius: 8px;
+`;
+
 export const KeyBoardAvoidContainer = styled.KeyboardAvoidingView``;
 
 export const RoomsContainer = styled.View`
@@ -29,9 +37,14 @@ padding: 30px;
 `;
 
 export const Title = styled.Text`
-font-family: ${({theme}) => theme.fonts.primary_600};
+//font-family: 'Archivo Black';
+font-style: normal;
 font-size: 25px;
-color: ${({theme}) => theme.colors.success[600]};
+text-align: center;
+
+color: #FFFFFF;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const BackgroundImage = styled.Image`

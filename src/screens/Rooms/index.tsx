@@ -7,7 +7,8 @@ import {
   LogoutContainer,
   Title,
   RoomsContainer,
-  BackgroundImage
+  BackgroundImage,
+  IconContainer
 } from './styles';
 import { useNavigation } from '@react-navigation/native';
 import { useTheme } from 'styled-components/native';
@@ -45,8 +46,10 @@ const Rooms = () => {
     <Container>
       <KeyBoardAvoidContainer behavior={Platform.OS === "ios" ? "padding" : "height"}>
         <LogoutContainer>
+          <IconContainer>
+        <IconButton onPress={goBack} icon='logout' color={theme.colors.gray[400]} />
+        </IconContainer>
           <Title>Choose your Room</Title>
-          <IconButton onPress={goBack} icon='logout' color={theme.colors.success[600]} />
         </LogoutContainer>
         <BackgroundImage source={ChefeniaMapPng} resizeMode="cover" alt="Room Map" />
         <RoomsContainer>
