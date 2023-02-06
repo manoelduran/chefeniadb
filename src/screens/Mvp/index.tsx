@@ -58,7 +58,7 @@ const Mvp = () => {
                     <ElementContainer color='#3B9698'>
                         <PropertiesText>WIND</PropertiesText>
                         <ValueContainer>
-                            <PropertiesValue>{mvp.wind} &</PropertiesValue>
+                            <PropertiesValue>{mvp.wind} %</PropertiesValue>
                         </ValueContainer>
 
                     </ElementContainer>
