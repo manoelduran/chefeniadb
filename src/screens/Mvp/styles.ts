@@ -35,7 +35,6 @@ border-radius: 8px;
 
 
 export const KeyBoardAvoidContainer = styled.KeyboardAvoidingView`
-
 `;
 
 export const ScrollContainer = styled.ScrollView``;
@@ -56,9 +55,7 @@ font-weight: 400;
 font-size: 20px;
 line-height: 22px;
 text-align: center;
-
 color: #FFFFFF;
-
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
@@ -98,10 +95,20 @@ font-style: normal;
 font-weight: 400;
 font-size: 20px;
 line-height: 22px;
-text-align: center;
 
 color: #FFFFFF;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`;
 
+export const PropertiesValue = styled.Text`
+//font-family: 'Archivo Black';
+margin-top: 25px;
+
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 22px;
+color: #FFFFFF;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
@@ -119,18 +126,20 @@ font-weight: 400;
 font-size: 20px;
 line-height: 22px;
 text-align: center;
-
 color: #FFFFFF;
-
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const ElementContainer = styled.View<ElementContainerProps>`
-
+width: 100%;
 display: flex;
+padding: 10px;
 flex-direction: row;
 background: ${({color}) => color ? color : '#213791'};
 align-items: center;
-text-align: center;
-justify-content: space-around;
+justify-content: space-between;
+`;
+
+export const ValueContainer = styled.View`
+padding-right: 20px;
 `;

@@ -3,7 +3,7 @@ import React from 'react';
 import { useTheme } from 'styled-components/native';
 import { MvpNavigationProps } from '../../@types/navigation';
 import IconButton from '../../components/IconButton';
-import { Container, GoBackContainer, ImageContainer, Separator, LogoutContainer, MvpImage, PropertiesContainer, ScrollContainer, Title, PropertiesText, WeaknessesContainer, LabelWeaknesses, DataContainer, ElementContainer } from './styles';
+import { Container, GoBackContainer, ImageContainer, Separator, LogoutContainer, MvpImage, PropertiesContainer, ScrollContainer, Title, PropertiesText, WeaknessesContainer, LabelWeaknesses, DataContainer, ElementContainer, PropertiesValue, ValueContainer } from './styles';
 const Mvp = () => {
     const route = useRoute();
     const { mvp } = route.params as MvpNavigationProps;
@@ -34,7 +34,7 @@ const Mvp = () => {
                     </DataContainer>
                     <Separator />
                     <DataContainer>
-                    <PropertiesText>{mvp.quantity}</PropertiesText>
+                        <PropertiesText>{mvp.quantity}</PropertiesText>
                         <PropertiesText>{mvp.level}</PropertiesText>
                         <PropertiesText>{mvp.breed}</PropertiesText>
                         <PropertiesText>{mvp.property}</PropertiesText>
@@ -42,45 +42,72 @@ const Mvp = () => {
                 </PropertiesContainer>
                 <LabelWeaknesses>WEAKNESSES</LabelWeaknesses>
                 <WeaknessesContainer>
-                    <ElementContainer color='#C44D41' >
+                    <ElementContainer color='#C44D41' style={{borderTopLeftRadius: 20, borderTopRightRadius: 20}}>
                         <PropertiesText >FIRE</PropertiesText>
-                        <PropertiesText>{mvp.fire}</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.fire}</PropertiesValue>
+                        </ValueContainer>
                     </ElementContainer>
                     <ElementContainer color='#CCB25B'>
                         <PropertiesText>EARTH</PropertiesText>
-                        <PropertiesText>{mvp.earth}</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.earth}</PropertiesValue>
+                        </ValueContainer>
+
                     </ElementContainer>
                     <ElementContainer color='#3B9698'>
                         <PropertiesText>WIND</PropertiesText>
-                        <PropertiesText>{mvp.wind}</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.wind}</PropertiesValue>
+                        </ValueContainer>
+
                     </ElementContainer>
                     <ElementContainer color='#265990'>
                         <PropertiesText>WATER</PropertiesText>
-                        <PropertiesText>{mvp.water}</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.water}</PropertiesValue>
+                        </ValueContainer>
+
                     </ElementContainer>
                     <ElementContainer color='#38A649'>
                         <PropertiesText>POISON</PropertiesText>
-                        <PropertiesText>{mvp.poison}</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.poison}</PropertiesValue>
+                        </ValueContainer>
+
                     </ElementContainer>
                     <ElementContainer color='#6B48C7'>
                         <PropertiesText>DARK</PropertiesText>
-                        <PropertiesText>{mvp.dark}</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.dark}</PropertiesValue>
+                        </ValueContainer>
+
                     </ElementContainer>
                     <ElementContainer color='#B3B3BD'>
                         <PropertiesText>NEUTRAL</PropertiesText>
-                        <PropertiesText>{mvp.neutral}</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.neutral}</PropertiesValue>
+                        </ValueContainer>
                     </ElementContainer>
                     <ElementContainer color='#E4E3E8'>
                         <PropertiesText>HOLY</PropertiesText>
-                        <PropertiesText>{mvp.holy}</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.holy}</PropertiesValue>
+                        </ValueContainer>
+
                     </ElementContainer>
                     <ElementContainer color='#C2A1D8'>
                         <PropertiesText>GHOST</PropertiesText>
-                        <PropertiesText>{mvp.ghost}</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.ghost}</PropertiesValue>
+                        </ValueContainer>
+
                     </ElementContainer>
-                    <ElementContainer color='#272733'>
+                    <ElementContainer color='#272733' >
                         <PropertiesText>UNDEAD</PropertiesText>
-                        <PropertiesText>{mvp.undead}</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.undead}</PropertiesValue>
+                        </ValueContainer>
                     </ElementContainer>
                 </WeaknessesContainer>
             </ScrollContainer>
