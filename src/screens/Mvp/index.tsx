@@ -45,68 +45,68 @@ const Mvp = () => {
                     <ElementContainer color='#C44D41' style={{borderTopLeftRadius: 20, borderTopRightRadius: 20}}>
                         <PropertiesText >FIRE</PropertiesText>
                         <ValueContainer>
-                            <PropertiesValue>{mvp.fire}</PropertiesValue>
+                            <PropertiesValue>{mvp.fire} %</PropertiesValue>
                         </ValueContainer>
                     </ElementContainer>
                     <ElementContainer color='#CCB25B'>
                         <PropertiesText>EARTH</PropertiesText>
                         <ValueContainer>
-                            <PropertiesValue>{mvp.earth}</PropertiesValue>
+                            <PropertiesValue>{mvp.earth} %</PropertiesValue>
                         </ValueContainer>
 
                     </ElementContainer>
                     <ElementContainer color='#3B9698'>
                         <PropertiesText>WIND</PropertiesText>
                         <ValueContainer>
-                            <PropertiesValue>{mvp.wind}</PropertiesValue>
+                            <PropertiesValue>`{mvp.wind} &`</PropertiesValue>
                         </ValueContainer>
 
                     </ElementContainer>
                     <ElementContainer color='#265990'>
                         <PropertiesText>WATER</PropertiesText>
                         <ValueContainer>
-                            <PropertiesValue>{mvp.water}</PropertiesValue>
+                            <PropertiesValue>{mvp.water} %</PropertiesValue>
                         </ValueContainer>
 
                     </ElementContainer>
                     <ElementContainer color='#38A649'>
                         <PropertiesText>POISON</PropertiesText>
                         <ValueContainer>
-                            <PropertiesValue>{mvp.poison}</PropertiesValue>
+                            <PropertiesValue>{mvp.poison} %</PropertiesValue>
                         </ValueContainer>
 
                     </ElementContainer>
                     <ElementContainer color='#6B48C7'>
                         <PropertiesText>DARK</PropertiesText>
                         <ValueContainer>
-                            <PropertiesValue>{mvp.dark}</PropertiesValue>
+                            <PropertiesValue>{mvp.dark} %</PropertiesValue>
                         </ValueContainer>
 
                     </ElementContainer>
                     <ElementContainer color='#B3B3BD'>
                         <PropertiesText>NEUTRAL</PropertiesText>
                         <ValueContainer>
-                            <PropertiesValue>{mvp.neutral}</PropertiesValue>
+                            <PropertiesValue>{mvp.neutral} %</PropertiesValue>
                         </ValueContainer>
                     </ElementContainer>
                     <ElementContainer color='#E4E3E8'>
                         <PropertiesText>HOLY</PropertiesText>
                         <ValueContainer>
-                            <PropertiesValue>{mvp.holy}</PropertiesValue>
+                            <PropertiesValue>{mvp.holy} %</PropertiesValue>
                         </ValueContainer>
 
                     </ElementContainer>
                     <ElementContainer color='#C2A1D8'>
                         <PropertiesText>GHOST</PropertiesText>
                         <ValueContainer>
-                            <PropertiesValue>{mvp.ghost}</PropertiesValue>
+                            <PropertiesValue>{mvp.ghost} %</PropertiesValue>
                         </ValueContainer>
 
                     </ElementContainer>
                     <ElementContainer color='#272733' >
                         <PropertiesText>UNDEAD</PropertiesText>
                         <ValueContainer>
-                            <PropertiesValue>{mvp.undead}</PropertiesValue>
+                            <PropertiesValue>{mvp.undead} %</PropertiesValue>
                         </ValueContainer>
                     </ElementContainer>
                 </WeaknessesContainer>
