@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { UserState } from '../store/modules/user/types';
 
 export const api = axios.create({
     baseURL: "http://192.168.15.11:3333",
@@ -22,7 +23,7 @@ export const getMvp = async (name: string) => {
 };
 
 export const authUser = async (data: FormUser) => {
-    const response = await api.post("/session", data);
+    const response = await api.post<UserState>("/session", data);
     console.log('response', response.data)
     return response;
 }
