@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Envelope, Icon, Key } from 'phosphor-react-native';
 import chefeniaSvg from '../../assets/chefenia.png';
 import Button from '../../components/Button';
@@ -21,19 +21,29 @@ import {
 import { Alert, Platform } from 'react-native';
 import { useTheme } from 'styled-components/native';
 import * as api from '../../services/api';
+import { useDispatch, useSelector } from 'react-redux';
+import ApplicationState from '../../store/types/ApplicationState';
+import { UserState } from '../../store/modules/user/types';
+import { saveUserStart, saveUserSuccess } from '../../store/modules/user/actions';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
 const SignIn: React.FC = () => {
   const theme = useTheme();
+  const dispatch = useDispatch();
   const formRef = useRef<FormHandles>(null);
-  const navigate = useNavigation();
+  const navigation = useNavigation();
+  const data = useSelector<ApplicationState, UserState>(applicationState => applicationState.user);
+
   const [loading, setLoading] = useState(false);
-  const handleSignIn = useCallback(async (data: FormUser) => {
+
+  const handleSignIn = useCallback(async (formData: FormUser) => {
     try {
       setLoading(true);
-      console.log('data', data)
-       await api.authUser(data);
+      dispatch(saveUserStart(formData, data))
+      await AsyncStorage.setItem('CHEFENIADB@user', JSON.stringify(data))
+ 
     } catch (error: any) {
       return error.message;
     } finally {
