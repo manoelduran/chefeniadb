@@ -42,7 +42,7 @@ const SignIn: React.FC = () => {
     try {
       setLoading(true);
       dispatch(saveUserStart(formData, data))
-      await AsyncStorage.setItem('CHEFENIADB@user', JSON.stringify(data))
+      
  
     } catch (error: any) {
       return error.message;

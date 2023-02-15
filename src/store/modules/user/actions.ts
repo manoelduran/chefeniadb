@@ -38,7 +38,8 @@ export const updateUser = (user: User) => {
 export const logoutUser = () => {
     return {
         type: types.userActionTypes.LOAD_LOGOUT_USER,
-        payload: {},
+        payload: {
+        },
     }
 }
 

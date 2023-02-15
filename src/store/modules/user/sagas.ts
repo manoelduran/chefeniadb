@@ -18,6 +18,7 @@ import {
 import { AxiosResponse } from 'axios';
 import { authUser } from '../../../services/api';
 import { onSendCallForShowSaveUser, UserState } from './types';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 function* onLoadSaveUserStartAsync({ payload }: onSendCallForShowSaveUser) {
@@ -27,6 +28,7 @@ function* onLoadSaveUserStartAsync({ payload }: onSendCallForShowSaveUser) {
         const response: AxiosResponse<UserState> = yield call(authUser, credentials);
         if (response) {
             console.log('RESPONSE . DATA' ,response.data)
+            yield AsyncStorage.setItem('CHEFENIADB@user', JSON.stringify(response.data))
             yield delay(500); // setTimeOut
             yield put(saveUserSuccess(response.data));
         };

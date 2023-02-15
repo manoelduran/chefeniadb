@@ -42,25 +42,11 @@ const Mvp = () => {
                 </PropertiesContainer>
                 <LabelWeaknesses>WEAKNESSES</LabelWeaknesses>
                 <WeaknessesContainer>
-                    <ElementContainer color='#C44D41' style={{borderTopLeftRadius: 20, borderTopRightRadius: 20}}>
-                        <PropertiesText >FIRE</PropertiesText>
+                <ElementContainer color='#B3B3BD' style={{borderTopLeftRadius: 20, borderTopRightRadius: 20}}>
+                        <PropertiesText>NEUTRAL</PropertiesText>
                         <ValueContainer>
-                            <PropertiesValue>{mvp.fire} %</PropertiesValue>
+                            <PropertiesValue>{mvp.neutral} %</PropertiesValue>
                         </ValueContainer>
-                    </ElementContainer>
-                    <ElementContainer color='#CCB25B'>
-                        <PropertiesText>EARTH</PropertiesText>
-                        <ValueContainer>
-                            <PropertiesValue>{mvp.earth} %</PropertiesValue>
-                        </ValueContainer>
-
-                    </ElementContainer>
-                    <ElementContainer color='#3B9698'>
-                        <PropertiesText>WIND</PropertiesText>
-                        <ValueContainer>
-                            <PropertiesValue>{mvp.wind} %</PropertiesValue>
-                        </ValueContainer>
-
                     </ElementContainer>
                     <ElementContainer color='#265990'>
                         <PropertiesText>WATER</PropertiesText>
@@ -69,6 +55,28 @@ const Mvp = () => {
                         </ValueContainer>
 
                     </ElementContainer>
+                    <ElementContainer color='#daaf85'>
+                        <PropertiesText>EARTH</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.earth} %</PropertiesValue>
+                        </ValueContainer>
+
+                    </ElementContainer>
+                    <ElementContainer color='#C44D41' >
+                        <PropertiesText >FIRE</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.fire} %</PropertiesValue>
+                        </ValueContainer>
+                    </ElementContainer>
+                
+                    <ElementContainer color='#3B9698'>
+                        <PropertiesText>WIND</PropertiesText>
+                        <ValueContainer>
+                            <PropertiesValue>{mvp.wind} %</PropertiesValue>
+                        </ValueContainer>
+
+                    </ElementContainer>
+                 
                     <ElementContainer color='#38A649'>
                         <PropertiesText>POISON</PropertiesText>
                         <ValueContainer>
@@ -76,26 +84,22 @@ const Mvp = () => {
                         </ValueContainer>
 
                     </ElementContainer>
-                    <ElementContainer color='#6B48C7'>
-                        <PropertiesText>DARK</PropertiesText>
-                        <ValueContainer>
-                            <PropertiesValue>{mvp.dark} %</PropertiesValue>
-                        </ValueContainer>
-
-                    </ElementContainer>
-                    <ElementContainer color='#B3B3BD'>
-                        <PropertiesText>NEUTRAL</PropertiesText>
-                        <ValueContainer>
-                            <PropertiesValue>{mvp.neutral} %</PropertiesValue>
-                        </ValueContainer>
-                    </ElementContainer>
-                    <ElementContainer color='#E4E3E8'>
+                    <ElementContainer color='#ffbaaa'>
                         <PropertiesText>HOLY</PropertiesText>
                         <ValueContainer>
                             <PropertiesValue>{mvp.holy} %</PropertiesValue>
                         </ValueContainer>
 
                     </ElementContainer>
+                    <ElementContainer color='#6B48C7'>
+                        <PropertiesText>DARK</PropertiesText>
+                        <ValueContainer >
+                            <PropertiesValue>{mvp.dark} %</PropertiesValue>
+                        </ValueContainer>
+
+                    </ElementContainer>
+              
+                    
                     <ElementContainer color='#C2A1D8'>
                         <PropertiesText>GHOST</PropertiesText>
                         <ValueContainer>

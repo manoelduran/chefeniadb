@@ -20,12 +20,16 @@ import { RoomsState } from '../../store/modules/rooms/types';
 import { loadRoomsStart } from '../../store/modules/rooms/actions';
 import Loading from '../../components/Loading';
 import { FlatGrid } from 'react-native-super-grid';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { UserState } from '../../store/modules/user/types';
+import { logoutUser } from '../../store/modules/user/actions';
 
 const Rooms = () => {
   const theme = useTheme()
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const { rooms, isLoading } = useSelector<ApplicationState, RoomsState>(applicationState => applicationState.rooms);
+  const { user } = useSelector<ApplicationState, UserState>(applicationState => applicationState.user);
 
   useEffect(() => {
     dispatch(loadRoomsStart(rooms))
@@ -39,7 +43,8 @@ const Rooms = () => {
     }
   }, [])
   const goBack = () => {
-    navigation.goBack();
+    dispatch(logoutUser())
+    AsyncStorage.removeItem('CHEFENIADB@user')
   };
   console.log('rooms', rooms)
   return (

@@ -24,13 +24,13 @@ const userReducer: Reducer<types.UserState> = (state = initialState, action) => 
         case types.userActionTypes.LOAD_SAVE_USER_SUCCESS:
             console.log('LOAD_SAVE_USER_SUCCESS', action.payload)
             console.log('LOAD_SAVE_USER_SUCCESS', state)
- 
+
             return {
                 ...state,
                 isLoading: false,
                 user: action.payload.user,
                 token: action.payload.token,
-                refreshToken: action.payload.refreshToken 
+                refreshToken: action.payload.refreshToken
 
             };
         case types.userActionTypes.LOAD_SAVE_USER_ERROR:
@@ -46,10 +46,18 @@ const userReducer: Reducer<types.UserState> = (state = initialState, action) => 
                 data: action.payload,
             };
         case types.userActionTypes.LOAD_LOGOUT_USER:
+            console.log('LOAD_LOGOUT_USER', action.payload)
+            console.log('LOAD_LOGOUT_USER', state)
             return {
-                ...state,
-                isLoading: false,
-                user: action.payload,
+                state:  {
+                    isLoading: false,
+                    user: null,
+                    token: null,
+                    refreshToken: null,
+                    userType: null,
+                    isSigned: false,
+                    error: null,
+                }
             }
         default:
             return state;

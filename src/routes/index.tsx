@@ -9,25 +9,32 @@ import ApplicationState from '../store/types/ApplicationState';
 import { AppRoutes } from './app.routes';
 
 const Routes = () => {
-    const data = useSelector<ApplicationState, UserState>(applicationState => applicationState.user);
+    const { user } = useSelector<ApplicationState, UserState>(applicationState => applicationState.user);
+
     const dispatch = useDispatch();
     const checkIfUserExist = async () => {
-        await AsyncStorage.getItem('CHEFENIADB@user', (_err, result) => {
+        AsyncStorage.getItem('CHEFENIADB@user', (_err, result) => {
             console.log('result', result)
             if (result) {
-                const user = JSON.parse(result)
-                console.log('user 2222222222222222', user.data.data.refreshToken)
-                dispatch(saveUserSuccess(user.data.data))
+                const response = JSON.parse(result)
+                if (response.user !== null) {
+                    dispatch(saveUserSuccess(response))
+                }
 
             }
         })
     }
+
+
     useEffect(() => {
-        checkIfUserExist()
+        const init = async () => {
+            await checkIfUserExist()
+        }
+        init()
     }, [])
     return (
         <NavigationContainer>
-            {!!data.refreshToken ? (
+            {user ? (
                 <AppRoutes />
             )
                 :
