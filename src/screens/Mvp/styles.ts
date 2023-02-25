@@ -41,7 +41,8 @@ export const ScrollContainer = styled.ScrollView``;
 
 export const ImageContainer = styled.View`
 margin-top: 20px;
-padding: 20px 0px;
+
+
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -61,7 +62,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 export const MvpImage = styled.Image`
 width: 120px;
-height: 110px;
+height: 200px;
 `;
 
 export const PropertiesContainer = styled.View`

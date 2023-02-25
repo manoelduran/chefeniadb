@@ -21,7 +21,9 @@ mix-blend-mode: normal;
 background: #213791;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 25px;
-padding: 20px;
+padding-left: 30px;
+padding-top: 50px;
+padding-bottom: 50px;
 `;
 
 export const MvpInfoContainer = styled.View`
@@ -29,8 +31,8 @@ flex: 1;
 `;
 
 export const MvpImage = styled.Image`
-width: 120px;
-height: 110px;
+width: 90px;
+height: 150px;
 
 `;
 
