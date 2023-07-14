@@ -10,11 +10,9 @@ import { AppRoutes } from './app.routes';
 
 const Routes = () => {
     const { user } = useSelector<ApplicationState, UserState>(applicationState => applicationState.user);
-
     const dispatch = useDispatch();
     const checkIfUserExist = async () => {
         AsyncStorage.getItem('CHEFENIADB@user', (_err, result) => {
-            console.log('result', result)
             if (result) {
                 const response = JSON.parse(result)
                 if (response.user !== null) {

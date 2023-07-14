@@ -14,7 +14,6 @@ export const saveUserStart = (credentials: FormUser, data: UserState) => {
 
 
 export const saveUserSuccess = (data: UserState) => {
-    console.log('data do sucesso', data)
     return {
         type: types.userActionTypes.LOAD_SAVE_USER_SUCCESS,
         payload: data,

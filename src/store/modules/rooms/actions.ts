@@ -1,7 +1,6 @@
 import * as types from './types';
 
 export const loadRoomsStart = (rooms: Room[]) => {
-    console.log('rooms', rooms)
     return {
         type: types.LOAD_ROOMS_START,
         payload: rooms,

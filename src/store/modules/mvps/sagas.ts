@@ -21,7 +21,6 @@ function* onLoadMvpsStartAsync({ payload }: onSendCallForShowMvpStart) {
     const { room_id } = payload;
     try {
         const response: AxiosResponse<Mvp[]> = yield call(getMvpsByRoomId, room_id);
-        console.log('reduxResponse', response)
         if (response) {
             yield delay(500); // setTimeOut
             yield put(loadMvpsSuccess(response.data));

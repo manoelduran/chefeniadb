@@ -35,7 +35,6 @@ const Rooms = () => {
     dispatch(loadRoomsStart(rooms))
   }, []);
   const selectedRoom = useCallback((room: Room) => {
-    console.log('item', room)
     if (room) {
       navigation.navigate('room', {
         room
@@ -46,7 +45,6 @@ const Rooms = () => {
     dispatch(logoutUser())
     AsyncStorage.removeItem('CHEFENIADB@user')
   };
-  console.log('rooms', rooms)
   return (
     <Container>
       <KeyBoardAvoidContainer behavior={Platform.OS === "ios" ? "padding" : "height"}>

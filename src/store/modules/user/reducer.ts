@@ -14,16 +14,12 @@ const initialState: types.UserState = {
 const userReducer: Reducer<types.UserState> = (state = initialState, action) => {
     switch (action.type) {
         case types.userActionTypes.LOAD_SAVE_USER_START:
-            console.log('LOAD_SAVE_USER_START', action.payload)
-            console.log('LOAD_SAVE_USER_START', state)
             return {
                 ...state,
                 isLoading: true,
                 payload: action.payload,
             };
         case types.userActionTypes.LOAD_SAVE_USER_SUCCESS:
-            console.log('LOAD_SAVE_USER_SUCCESS', action.payload)
-            console.log('LOAD_SAVE_USER_SUCCESS', state)
 
             return {
                 ...state,
@@ -46,8 +42,6 @@ const userReducer: Reducer<types.UserState> = (state = initialState, action) => 
                 data: action.payload,
             };
         case types.userActionTypes.LOAD_LOGOUT_USER:
-            console.log('LOAD_LOGOUT_USER', action.payload)
-            console.log('LOAD_LOGOUT_USER', state)
             return {
                 state:  {
                     isLoading: false,

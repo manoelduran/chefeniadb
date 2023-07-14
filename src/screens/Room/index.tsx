@@ -34,7 +34,6 @@ const Room: React.FC = () => {
         navigation.goBack();
     };
     const { mvps, isLoading, error } = useSelector<ApplicationState, MvpsState>(applicationState => applicationState.mvps);
-
     useEffect(() => {
         dispatch(loadMvpsStart(String(room?.id), mvps))
     }, []);
@@ -99,7 +98,7 @@ const Room: React.FC = () => {
                     showsVerticalScrollIndicator={false}
                     contentContainerStyle={{ paddingBottom: 100 }}
                     renderItem={({ item, index }) => (
-                        <MvpCard key={index} mvp={item} onPress={() => selectedMvp(item)} />
+                        <MvpCard key={index} mvp={item}  onPress={() => selectedMvp(item)} />
                     )}
                 />
             )}

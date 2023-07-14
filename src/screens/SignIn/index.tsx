@@ -35,7 +35,6 @@ const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const navigation = useNavigation();
   const data = useSelector<ApplicationState, UserState>(applicationState => applicationState.user);
-
   const [loading, setLoading] = useState(false);
 
   const handleSignIn = useCallback(async (formData: FormUser) => {

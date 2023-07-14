@@ -7,7 +7,6 @@ import { Container, GoBackContainer, ImageContainer, Separator, LogoutContainer,
 const Mvp = () => {
     const route = useRoute();
     const { mvp } = route.params as MvpNavigationProps;
-    console.log('mvp', mvp)
     const navigation = useNavigation();
     const theme = useTheme();
     const goBack = () => {
@@ -22,7 +21,7 @@ const Mvp = () => {
                     </GoBackContainer>
                 </LogoutContainer>
                 <ImageContainer>
-                    <MvpImage source={{ uri: mvp.mvp_url }} resizeMode="cover" alt="Room Map" />
+                    <MvpImage source={{ uri: `https://chefeniadb-api.s3.sa-east-1.amazonaws.com/${mvp.name.replace(/ /g, '+')}.gif` }} resizeMode="cover" alt="Room Map" />
                     <Title>{mvp.name}</Title>
                 </ImageContainer>
                 <PropertiesContainer>

@@ -1,7 +1,6 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Sword, Skull } from 'phosphor-react-native';
-import FallbackImage from '../../assets/logo.png';
 import { useTheme } from 'styled-components/native';
 import {
     Container,
@@ -19,12 +18,11 @@ interface MvpCardProps extends TouchableOpacityProps {
 
 const MvpCard: React.FC<MvpCardProps> = ({ mvp, onPress, ...rest }) => {
     const theme = useTheme()
-
     return (
         <Container onPress={onPress} {...rest}>
 
             <Content >
-                <MvpImage source={{uri: mvp.mvp_url}} resizeMode="cover"  alt={mvp.name}  />
+                <MvpImage source={{ uri: `https://chefeniadb-api.s3.sa-east-1.amazonaws.com/${mvp.name.replace(/ /g, '+')}.gif` }} resizeMode="cover" alt={mvp.name} />
                 <MvpInfoContainer   >
                     <NameContainer >
                         <Skull
