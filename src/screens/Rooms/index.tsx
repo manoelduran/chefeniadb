@@ -49,9 +49,9 @@ const Rooms = () => {
     <Container>
       <KeyBoardAvoidContainer behavior={Platform.OS === "ios" ? "padding" : "height"}>
         <LogoutContainer>
-          <IconContainer>
+          {/*<IconContainer>
         <IconButton onPress={goBack} icon='logout' color={theme.colors.gray[400]} />
-        </IconContainer>
+  </IconContainer>*/}
           <Title>Choose your Room</Title>
         </LogoutContainer>
         <BackgroundImage source={ChefeniaMapPng} resizeMode="cover" alt="Room Map" />

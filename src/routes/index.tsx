@@ -1,4 +1,4 @@
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+/*import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -39,6 +39,18 @@ const Routes = () => {
                 (
                     <SignIn />
                 )}
+        </NavigationContainer>
+    );
+};
+
+export default Routes;*/
+import { NavigationContainer } from '@react-navigation/native';
+import { AppRoutes } from './app.routes';
+
+const Routes = () => {
+    return (
+        <NavigationContainer>
+                <AppRoutes />
         </NavigationContainer>
     );
 };
