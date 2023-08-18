@@ -6,7 +6,7 @@ import { store } from "./src/store";
 import Routes from "./src/routes";
 import { ThemeProvider } from "styled-components/native";
 import { StatusBar } from 'expo-status-bar';
-import {theme} from './src/styles/theme';
+import { theme } from './src/styles/theme';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -14,6 +14,9 @@ export default function App() {
     Inter_500Medium,
     Inter_600SemiBold
   })
+  if (!fontsLoaded) {
+    return <Loading />
+  }
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
@@ -21,10 +24,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ?
-          <Routes/>
-          : <Loading />
-        }
+        <Routes />
       </ThemeProvider>
     </Provider>
   );

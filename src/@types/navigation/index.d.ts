@@ -9,6 +9,7 @@ export type MvpNavigationProps = {
 export declare global {
     namespace ReactNavigation {
         interface RootParamList {
+            splash: undefined;
             rooms: undefined;
             room: RoomNavigationProps;
             mvp: MvpNavigationProps;
