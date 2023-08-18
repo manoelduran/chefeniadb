@@ -20,11 +20,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.manoelduran.chefeniadb"
     },
-
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ad4a47ed-95b3-4ca9-bb9b-766d09cd0a88"
+      }
     }
   }
 }
