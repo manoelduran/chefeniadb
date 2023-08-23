@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import RoomCard from '../../components/RoomCard';
 import ChefeniaMapPng from '../../assets/chefeniamap.png';
+import RoomsInJson from '../../assets/json/rooms.json';
 import {
   Container,
   KeyBoardAvoidContainer,
@@ -28,12 +29,12 @@ const Rooms = () => {
   const theme = useTheme()
   const dispatch = useDispatch();
   const navigation = useNavigation();
-  const { rooms, isLoading } = useSelector<ApplicationState, RoomsState>(applicationState => applicationState.rooms);
-  const { user } = useSelector<ApplicationState, UserState>(applicationState => applicationState.user);
-
-  useEffect(() => {
+  //const { rooms, isLoading } = useSelector<ApplicationState, RoomsState>(applicationState => applicationState.rooms);
+  //const { user } = useSelector<ApplicationState, UserState>(applicationState => applicationState.user);
+  RoomsInJson
+  /*useEffect(() => {
     dispatch(loadRoomsStart(rooms))
-  }, []);
+  }, []);*/
   const selectedRoom = useCallback((room: Room) => {
     if (room) {
       navigation.navigate('room', {
@@ -56,19 +57,19 @@ const Rooms = () => {
         </LogoutContainer>
         <BackgroundImage source={ChefeniaMapPng} resizeMode="cover" alt="Room Map" />
         <RoomsContainer>
-          {isLoading ? (
+    {/*      {isLoading ? (
             <Loading />
-          ) : (
+    ) : (*/}
             <FlatGrid
               style={{ flex: 1 }}
-              data={rooms}
+              data={RoomsInJson}
               itemDimension={130}
               renderItem={({ item, index }) => (
                 <RoomCard key={index} title={item.name} onPress={() => selectedRoom(item)} />
               )}
             />
-          )
-          }
+        {/*  )
+          }*/}
         </RoomsContainer>
       </KeyBoardAvoidContainer>
     </Container>

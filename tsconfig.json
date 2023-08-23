@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
     "strict": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "resolveJsonModule": true,
   },
   "extends": "expo/tsconfig.base"
