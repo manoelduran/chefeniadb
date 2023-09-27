@@ -40,13 +40,12 @@ export const KeyBoardAvoidContainer = styled.KeyboardAvoidingView`
 export const ScrollContainer = styled.ScrollView``;
 
 export const ImageContainer = styled.View`
-margin-top: 20px;
-
-
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-evenly;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Mudando de row para column para permitir a quebra de linha */
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Alinhando o texto centralmente */
 `;
 
 export const Title = styled.Text`
@@ -57,12 +56,17 @@ font-size: 20px;
 line-height: 22px;
 text-align: center;
 color: #FFFFFF;
+max-width: 100%;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+word-wrap: break-word;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const MvpImage = styled.Image`
-width: 120px;
-height: 200px;
+width: 150px; /* Aumente a largura para 150px ou o tamanho desejado */
+  height: 250px; /* Aumente a altura para 250px ou o tamanho desejado */
 `;
 
 export const PropertiesContainer = styled.View`

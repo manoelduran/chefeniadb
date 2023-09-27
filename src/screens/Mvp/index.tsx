@@ -21,7 +21,7 @@ const Mvp = () => {
                     </GoBackContainer>
                 </LogoutContainer>
                 <ImageContainer>
-                    <MvpImage source={{ uri: `https://chefeniadb-api.s3.sa-east-1.amazonaws.com/${mvp.name.replace(/ /g, '+')}.gif` }} resizeMode="cover" alt="Room Map" />
+                    <MvpImage source={{ uri: `https://chefeniadb-api.s3.sa-east-1.amazonaws.com/${mvp.name.replace(/ /g, '+')}.gif` }} resizeMode="contain" alt={mvp.name} />
                     <Title>{mvp.name}</Title>
                 </ImageContainer>
                 <PropertiesContainer>
@@ -41,7 +41,7 @@ const Mvp = () => {
                 </PropertiesContainer>
                 <LabelWeaknesses>WEAKNESSES</LabelWeaknesses>
                 <WeaknessesContainer>
-                <ElementContainer color='#B3B3BD' style={{borderTopLeftRadius: 20, borderTopRightRadius: 20}}>
+                    <ElementContainer color='#B3B3BD' style={{ borderTopLeftRadius: 20, borderTopRightRadius: 20 }}>
                         <PropertiesText>NEUTRAL</PropertiesText>
                         <ValueContainer>
                             <PropertiesValue>{mvp.neutral} %</PropertiesValue>
@@ -67,7 +67,7 @@ const Mvp = () => {
                             <PropertiesValue>{mvp.fire} %</PropertiesValue>
                         </ValueContainer>
                     </ElementContainer>
-                
+
                     <ElementContainer color='#3B9698'>
                         <PropertiesText>WIND</PropertiesText>
                         <ValueContainer>
@@ -75,7 +75,7 @@ const Mvp = () => {
                         </ValueContainer>
 
                     </ElementContainer>
-                 
+
                     <ElementContainer color='#38A649'>
                         <PropertiesText>POISON</PropertiesText>
                         <ValueContainer>
@@ -97,8 +97,8 @@ const Mvp = () => {
                         </ValueContainer>
 
                     </ElementContainer>
-              
-                    
+
+
                     <ElementContainer color='#C2A1D8'>
                         <PropertiesText>GHOST</PropertiesText>
                         <ValueContainer>

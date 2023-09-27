@@ -22,7 +22,7 @@ const MvpCard: React.FC<MvpCardProps> = ({ mvp, onPress, ...rest }) => {
         <Container onPress={onPress} {...rest}>
 
             <Content >
-                <MvpImage source={{ uri: `https://chefeniadb-api.s3.sa-east-1.amazonaws.com/${mvp.name.replace(/ /g, '+')}.gif` }} resizeMode="cover" alt={mvp.name} />
+                <MvpImage source={{ uri: `https://chefeniadb-api.s3.sa-east-1.amazonaws.com/${mvp.name.replace(/ /g, '+')}.gif` }} resizeMode="contain" alt={mvp.name} />
                 <MvpInfoContainer   >
                     <NameContainer >
                         <Skull
@@ -30,7 +30,7 @@ const MvpCard: React.FC<MvpCardProps> = ({ mvp, onPress, ...rest }) => {
                         />
                         <MvpInfo>{mvp.name}</MvpInfo>
                     </NameContainer>
-                    <NameContainer style={{ marginTop: 10 }}>
+                    <NameContainer style={{ marginTop: 20 }}>
                         <Sword
                             size={20} color={theme.colors.white}
                         />
@@ -42,4 +42,4 @@ const MvpCard: React.FC<MvpCardProps> = ({ mvp, onPress, ...rest }) => {
     );
 };
 
-export default MvpCard;
+export default React.memo(MvpCard);

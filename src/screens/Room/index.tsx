@@ -72,13 +72,13 @@ const Room: React.FC = () => {
                 <IconContainer>
                     <IconButton onPress={goBack} color={theme.colors.gray[400]} icon='arrow-back' />
                 </IconContainer>
-                <Title>Mvps from {room.name}</Title>
+                <Title>{room.name}</Title>
             </LogoutContainer>
             <FormContainer ref={formRef} onSubmit={() => { }}>
                 <Input
                     name="search"
                     onChangeText={(search) => filteredMvp(search)}
-                    placeholder="Search a Mvp"
+                    placeholder="digite um mvp"
                 />
             </FormContainer>
 

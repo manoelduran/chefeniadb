@@ -53,9 +53,9 @@ const Rooms = () => {
           {/*<IconContainer>
         <IconButton onPress={goBack} icon='logout' color={theme.colors.gray[400]} />
   </IconContainer>*/}
-          <Title>Choose your Room</Title>
+          <Title>Selecione sua sala</Title>
         </LogoutContainer>
-        <BackgroundImage source={ChefeniaMapPng} resizeMode="cover" alt="Room Map" />
+        <BackgroundImage source={ChefeniaMapPng} resizeMode="contain" alt="Room Map" />
         <RoomsContainer>
     {/*      {isLoading ? (
             <Loading />
