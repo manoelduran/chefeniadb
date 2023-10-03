@@ -49,8 +49,5 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const BackgroundImage = styled.Image`
-  top: 0;
-  left: 0;
-
-  /* Define um z-index menor para a imagem de fundo */
+align-self: center;
 `;

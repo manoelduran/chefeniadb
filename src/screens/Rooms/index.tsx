@@ -55,7 +55,7 @@ const Rooms = () => {
   </IconContainer>*/}
           <Title>Selecione sua sala</Title>
         </LogoutContainer>
-        <BackgroundImage source={ChefeniaMapPng} resizeMode="contain" alt="Room Map" />
+        <BackgroundImage  source={ChefeniaMapPng} resizeMode="contain" alt="Room Map" />
         <RoomsContainer>
     {/*      {isLoading ? (
             <Loading />
